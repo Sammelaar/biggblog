@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on BiggBlog</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in Hugo on BiggBlog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This is my first blog (Blog-pipeline)</title>
+      <link>/posts/this-is-my-first-blog-blog-pipeline/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/this-is-my-first-blog-blog-pipeline/</guid>
+      <description>&lt;h2 id=&#34;uthe-goalu&#34;&gt;&lt;!-- raw HTML omitted --&gt;The goal&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To build a blog about cool things that are passing by in my life. Such things as tech or gadgets I bought/used.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;uhow-does-this-blog-worksu&#34;&gt;&lt;!-- raw HTML omitted --&gt;How does this blog works?&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;My blog is build with the following tools/products:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Obsidian is a powerful note-taking tool that focuses on building a personal knowledge base using Markdown files. It allows users to create a network of interconnected notes through links and tags, making it easy to organize and retrieve information. \n Go download it yourself! &lt;a href=&#34;https://obsidian.md/&#34;&gt;https://obsidian.md/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo is a fast and flexible static site generator designed for building websites. It uses templates and markdown files to create content, making it easy to structure and organize. With its lightning-fast build times, Hugo is particularly well-suited for developers and content creators who need to generate static sites quickly and efficiently. \n Go download it yourself! &lt;a href=&#34;https://gohugo.io&#34;&gt;https://gohugo.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Custom scripts&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;By custom scripts the local markdown files from Obsidian will be copied to the local Hugo-site.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub is a web-based platform for version control and collaboration, primarily used by developers to manage and share code. It leverages Git, a distributed version control system, to track changes to code over time, enabling multiple people to work on the same project simultaneously. \n Go use it yourself! &lt;a href=&#34;https://github.com&#34;&gt;https://github.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TransIP-hosting&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;TransIP is a Dutch hosting provider offering a wide range of web hosting services, including domain registration, cloud hosting, virtual private servers (VPS), and dedicated servers. Known for its reliable infrastructure and high-performance servers, TransIP allows users to easily manage their websites and online projects through an intuitive control panel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;uso-how-do-you-build-thisu&#34;&gt;&lt;!-- raw HTML omitted --&gt;So, how do you build this?&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;h4 id=&#34;obsidian&#34;&gt;Obsidian&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;First we start creating a folder called &lt;em&gt;posts&lt;/em&gt; in Obsidian where you can store all your blogposts.
+!&lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;/images/Pasted%20image%2020250103220213.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;hugo new site Biggelaar.it &amp;ndash;format yaml&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
