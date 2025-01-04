@@ -1,0 +1,66 @@
+baseURL: ""
+languageCode: en-us
+enableEmoji: true
+defaultTheme: auto
+theme: ["PaperMod"]
+
+title: BiggBlog
+
+menu:
+  main:
+    - identifier: archives
+      name: Posts
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+
+params:
+  env: production
+  Keywords: [Blog, Portfolio]
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShareButtons: ["linkedin"]
+  
+  homeInfoParams:
+    Title: "Hi there, Sam here! :wave:"
+    Content: "Every month, I'll share something new I've learned in the world of tech — from coding breakthroughs to emerging trends. 
+              No jargon, just genuine insights and inspiration. 
+              Grab a coffee and join me on this journey! 🚀"
+
+  socialIcons: # optional
+    - name: "Github"
+      url: "www.github.com"
+    - name: "Linkedin"
+      url: "www.linkedin.com/samvdbiggelaar"
+
+  label:
+    text: "BiggBlog"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  outputs:
+    home:
+      - HTML
+      - RSS
+      - JSON # necessary for search
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on BiggBlog</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on BiggBlog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github</title>
+      <link>/tags/github/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hosting</title>
+      <link>/tags/hosting/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/hosting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Obsidian</title>
+      <link>/tags/obsidian/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/obsidian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>/tags/tech/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/tech/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
