@@ -1,4 +1,6 @@
-baseURL: ""
+baseURL: "https://blog.biggelaar.it/"
+relativeURLs: true
+canonifyURLs: true
 languageCode: en-us
 enableEmoji: true
 defaultTheme: auto
@@ -40,9 +42,9 @@ params:
 
   socialIcons: # optional
     - name: "Github"
-      url: "www.github.com"
+      url: "https://www.github.com/Sammelaar"
     - name: "Linkedin"
-      url: "www.linkedin.com/samvdbiggelaar"
+      url: "https://www.linkedin.com/samvdbiggelaar"
 
   label:
     text: "BiggBlog"

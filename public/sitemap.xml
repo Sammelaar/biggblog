@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://blog.biggelaar.it/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/github/</loc>
+    <loc>https://blog.biggelaar.it/tags/github/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/hosting/</loc>
+    <loc>https://blog.biggelaar.it/tags/hosting/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/hugo/</loc>
+    <loc>https://blog.biggelaar.it/tags/hugo/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/obsidian/</loc>
+    <loc>https://blog.biggelaar.it/tags/obsidian/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://blog.biggelaar.it/posts/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://blog.biggelaar.it/tags/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tech/</loc>
+    <loc>https://blog.biggelaar.it/tags/tech/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/this-is-my-first-blog-blog-pipeline/</loc>
+    <loc>https://blog.biggelaar.it/posts/this-is-my-first-blog-blog-pipeline/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://blog.biggelaar.it/about/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://blog.biggelaar.it/categories/</loc>
   </url><url>
-    <loc>/archives/</loc>
+    <loc>https://blog.biggelaar.it/archives/</loc>
   </url><url>
-    <loc>/search/</loc>
+    <loc>https://blog.biggelaar.it/search/</loc>
   </url>
 </urlset>

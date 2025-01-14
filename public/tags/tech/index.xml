@@ -2,33 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tech on BiggBlog</title>
-    <link>/tags/tech/</link>
+    <link>https://blog.biggelaar.it/tags/tech/</link>
     <description>Recent content in Tech on BiggBlog</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.biggelaar.it/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>This is my first blog (Blog-pipeline)</title>
-      <link>/posts/this-is-my-first-blog-blog-pipeline/</link>
+      <link>https://blog.biggelaar.it/posts/this-is-my-first-blog-blog-pipeline/</link>
       <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/this-is-my-first-blog-blog-pipeline/</guid>
-      <description>&lt;h2 id=&#34;uthe-goalu&#34;&gt;&lt;!-- raw HTML omitted --&gt;The goal&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+      <guid>https://blog.biggelaar.it/posts/this-is-my-first-blog-blog-pipeline/</guid>
+      <description>&lt;h2 id=&#34;uthe-goalu-round_pushpin&#34;&gt;&lt;!-- raw HTML omitted --&gt;The goal&lt;!-- raw HTML omitted --&gt; &amp;#x1f4cd;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;To build a blog about cool things that are passing by in my life. Such things as tech or gadgets I bought/used.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;My goal is to create a semi-automated workflow that transforms a note from Notion into a webpage for a website, with version control and tracking managed through GitHub.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;uhow-does-this-blog-worksu&#34;&gt;&lt;!-- raw HTML omitted --&gt;How does this blog works?&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;p&gt;My blog is build with the following tools/products:&lt;/p&gt;
+&lt;h2 id=&#34;uhow-does-this-blog-worksu-man_shrugging&#34;&gt;&lt;!-- raw HTML omitted --&gt;How does this blog works?&lt;!-- raw HTML omitted --&gt; &amp;#x1f937;&amp;zwj;&amp;#x2642;&amp;#xfe0f;&lt;/h2&gt;
+&lt;p&gt;My blog is build with the following tools:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt;
+&lt;li&gt;&lt;strong&gt;Notion&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Obsidian is a powerful note-taking tool that focuses on building a personal knowledge base using Markdown files. It allows users to create a network of interconnected notes through links and tags, making it easy to organize and retrieve information. \n Go download it yourself! &lt;a href=&#34;https://obsidian.md/&#34;&gt;https://obsidian.md/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Notion is a versatile productivity and collaboration tool designed to help individuals and teams organize, manage, and streamline their work. It combines the functionality of note-taking, task management, databases, and wikis into a single platform. Go download it yourself! &lt;a href=&#34;https://notion.so&#34;&gt;https://notion.so&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Hugo is a fast and flexible static site generator designed for building websites. It uses templates and markdown files to create content, making it easy to structure and organize. With its lightning-fast build times, Hugo is particularly well-suited for developers and content creators who need to generate static sites quickly and efficiently. \n Go download it yourself! &lt;a href=&#34;https://gohugo.io&#34;&gt;https://gohugo.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hugo is a fast and flexible static site generator designed for building websites. It uses templates and markdown files to create content, making it easy to structure and organize. With its lightning-fast build times, Hugo is particularly well-suited for developers and content creators who need to generate static sites quickly and efficiently. Go download it yourself! &lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Custom scripts&lt;/strong&gt;
@@ -38,7 +37,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;GitHub is a web-based platform for version control and collaboration, primarily used by developers to manage and share code. It leverages Git, a distributed version control system, to track changes to code over time, enabling multiple people to work on the same project simultaneously. \n Go use it yourself! &lt;a href=&#34;https://github.com&#34;&gt;https://github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub is a web-based platform for version control and collaboration, primarily used by developers to manage and share code. It leverages Git, a distributed version control system, to track changes to code over time, enabling multiple people to work on the same project simultaneously. Go use it yourself! &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;TransIP-hosting&lt;/strong&gt;
@@ -47,13 +46,206 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;uso-how-do-you-build-thisu&#34;&gt;&lt;!-- raw HTML omitted --&gt;So, how do you build this?&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;h4 id=&#34;obsidian&#34;&gt;Obsidian&lt;/h4&gt;
+&lt;h2 id=&#34;uso-how-do-you-build-thisu-memo&#34;&gt;&lt;!-- raw HTML omitted --&gt;So, how do you build this?&lt;!-- raw HTML omitted --&gt; &amp;#x1f4dd;&lt;/h2&gt;
+&lt;h3 id=&#34;setting-up-notion&#34;&gt;Setting up Notion&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;First we start creating a folder called &lt;em&gt;posts&lt;/em&gt; in Obsidian where you can store all your blogposts.
-!&lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;/images/Pasted%20image%2020250103220213.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;First we start creating a page with the title of your first blog.&lt;/li&gt;
+&lt;li&gt;Go on, start typing your own blog now. &amp;#x1f525;&lt;/li&gt;
+&lt;li&gt;After writing your blog, you need to export the file to markdown. Save the file in a folder you remember, you need this folder later! &amp;#x1f4a1;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Markdown is a lightweight markup language designed to create formatted text using plain text syntax. It’s widely used because it is simple, easy to read, and can be converted to HTML or other formats for display.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;hugo new site Biggelaar.it &amp;ndash;format yaml&lt;/p&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;setting-up-hugo&#34;&gt;Setting up Hugo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Git: See &lt;a href=&#34;https://github.com/git-guides/install-git&#34;&gt;Github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Go: See &lt;a href=&#34;https://go.dev/dl/&#34;&gt;Go.dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Hugo: See &lt;a href=&#34;https://gohugo.io/&#34;&gt;Gohugo.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;create-a-new-site-in-hugo&#34;&gt;Create a new site in Hugo&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Verify Hugo works&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Create a new site&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site websitename
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd websitename
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-your-favorite-hugo-theme&#34;&gt;Find your favorite Hugo-theme&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Go have a look at &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Themes.gohugo.io/&lt;/a&gt;!
+&lt;ul&gt;
+&lt;li&gt;Every theme does have an instruction how to work with it, use this.&lt;/li&gt;
+&lt;li&gt;When you have your theme, add this as a Git submodule:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Initialize a git repository (Make sure you are in your Hugo website directory)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Set global username and email parameters for git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.email &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your.email@example.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Install a theme (we are installing the Terminal theme here). Once downloaded it should be in your Hugo themes folder&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Find a theme ---&amp;gt; &amp;lt;https://themes.gohugo.io/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add --depth&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &amp;lt;https://github.com/adityatelange/hugo-PaperMod.git&amp;gt; themes/PaperMod
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule update --init --recursive &lt;span style=&#34;color:#75715e&#34;&gt;# needed when you reclone your repo (submodules may not get cloned automatically)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;personalize-your-theme&#34;&gt;Personalize your theme&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Most of the themes you can download do have an example configuration-file that you can use. Try this one to test if Hugo is working.&lt;/li&gt;
+&lt;li&gt;I put the example file from the PaperMod-theme below so you can use this one.&lt;/li&gt;
+&lt;li&gt;To edit this hugo.yaml file you can use a tool as Visual Studio Code or the following command in Terminal &lt;strong&gt;nano hugo.yaml&lt;/strong&gt; or in PowerShell &lt;strong&gt;notepad hugo.yaml&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;baseURL: &amp;#34;&amp;lt;https://examplesite.com/&amp;gt;&amp;#34;
+title: ExampleSite
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: ExampleSite
+  description: &amp;#34;ExampleSite description&amp;#34;
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: [&amp;#34;Me&amp;#34;, &amp;#34;You&amp;#34;] # multiple authors
+  images: [&amp;#34;&amp;lt;link or path of image for opengraph, twitter-cards&amp;gt;&amp;#34;]
+  DateFormat: &amp;#34;January 2, 2006&amp;#34;
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: &amp;#34;&amp;lt;link / abs url&amp;gt;&amp;#34;
+    favicon16x16: &amp;#34;&amp;lt;link / abs url&amp;gt;&amp;#34;
+    favicon32x32: &amp;#34;&amp;lt;link / abs url&amp;gt;&amp;#34;
+    apple_touch_icon: &amp;#34;&amp;lt;link / abs url&amp;gt;&amp;#34;
+    safari_pinned_tab: &amp;#34;&amp;lt;link / abs url&amp;gt;&amp;#34;
+
+  label:
+    text: &amp;#34;Home&amp;#34;
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: &amp;#34;This is subtitle&amp;#34;
+    imageUrl: &amp;#34;&amp;lt;img location&amp;gt;&amp;#34;
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: &amp;#34;Hi there \\U0001F44B&amp;#34;
+    Content: Welcome to my blog
+
+  socialIcons:
+    - name: x
+      url: &amp;#34;&amp;lt;https://x.com/&amp;gt;&amp;#34;
+    - name: stackoverflow
+      url: &amp;#34;&amp;lt;https://stackoverflow.com&amp;gt;&amp;#34;
+    - name: github
+      url: &amp;#34;&amp;lt;https://github.com/&amp;gt;&amp;#34;
+
+  analytics:
+    google:
+      SiteVerificationTag: &amp;#34;XYZabc&amp;#34;
+    bing:
+      SiteVerificationTag: &amp;#34;XYZabc&amp;#34;
+    yandex:
+      SiteVerificationTag: &amp;#34;XYZabc&amp;#34;
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: &amp;#34;&amp;lt;https://github.com/&amp;gt;&amp;lt;path_to_repo&amp;gt;/content&amp;#34;
+    Text: &amp;#34;Suggest Changes&amp;#34; # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # &amp;lt;https://fusejs.io/api/options.html&amp;gt;
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: &amp;lt;https://www.fusejs.io/api/methods.html#search&amp;gt;
+    keys: [&amp;#34;title&amp;#34;, &amp;#34;permalink&amp;#34;, &amp;#34;summary&amp;#34;, &amp;#34;content&amp;#34;]
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: example
+      name: example.org
+      url: &amp;lt;https://example.org&amp;gt;
+      weight: 30
+# Read: &amp;lt;https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma&amp;gt;
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;copying-your-markdown-file-to-your-hugo-site&#34;&gt;Copying your Markdown file to your Hugo-site.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;So, we have build our post in Notion? &amp;#x2705;&lt;/li&gt;
+&lt;li&gt;We set up Hugo? &amp;#x2705;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s publish the post to our site then! &amp;#x1f642;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
