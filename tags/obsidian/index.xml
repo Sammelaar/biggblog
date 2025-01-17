@@ -6,38 +6,38 @@
     <description>Recent content in Obsidian on BiggBlog</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.biggelaar.it/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>This is my first blog (Blog-pipeline)</title>
       <link>https://blog.biggelaar.it/posts/this-is-my-first-blog-blog-pipeline/</link>
-      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.biggelaar.it/posts/this-is-my-first-blog-blog-pipeline/</guid>
-      <description>&lt;h2 id=&#34;uthe-goalu-round_pushpin&#34;&gt;&lt;!-- raw HTML omitted --&gt;The goal&lt;!-- raw HTML omitted --&gt; &amp;#x1f4cd;&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;uthe-goalu-round_pushpin&#34;&gt;&lt;!-- raw HTML omitted --&gt;The Goal&lt;!-- raw HTML omitted --&gt; &amp;#x1f4cd;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;My goal is to create a semi-automated workflow that transforms a note from Notion into a webpage for a website, with version control and tracking managed through GitHub.&lt;/li&gt;
+&lt;li&gt;My goal is to create a semi-automated workflow that transforms a note from Obsidian into a webpage for a website, with version control and tracking managed through GitHub.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;uhow-does-this-blog-worksu-man_shrugging&#34;&gt;&lt;!-- raw HTML omitted --&gt;How does this blog works?&lt;!-- raw HTML omitted --&gt; &amp;#x1f937;&amp;zwj;&amp;#x2642;&amp;#xfe0f;&lt;/h2&gt;
-&lt;p&gt;My blog is build with the following tools:&lt;/p&gt;
+&lt;p&gt;My blog is built with the following tools:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Notion&lt;/strong&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Notion is a versatile productivity and collaboration tool designed to help individuals and teams organize, manage, and streamline their work. It combines the functionality of note-taking, task management, databases, and wikis into a single platform. Go download it yourself! &lt;a href=&#34;https://notion.so&#34;&gt;https://notion.so&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Obsidian is a powerful note-taking tool that focuses on building a personal knowledge base using Markdown files. It allows users to create a network of interconnected notes through links and tags, making it easy to organize and retrieve information. \n Download it here! &lt;a href=&#34;https://obsidian.md/&#34;&gt;https://obsidian.md/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Hugo is a fast and flexible static site generator designed for building websites. It uses templates and markdown files to create content, making it easy to structure and organize. With its lightning-fast build times, Hugo is particularly well-suited for developers and content creators who need to generate static sites quickly and efficiently. Go download it yourself! &lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hugo is a fast and flexible static site generator designed for building websites. It uses templates and Markdown files to create content, making it easy to structure and organize. With its lightning-fast build times, Hugo is particularly well-suited for developers and content creators who need to generate static sites quickly and efficiently. Download it here! &lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Custom scripts&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;By custom scripts the local markdown files from Obsidian will be copied to the local Hugo-site.&lt;/li&gt;
+&lt;li&gt;Custom scripts copy local Markdown files from Obsidian will be copied to the local Hugo-site.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;GitHub is a web-based platform for version control and collaboration, primarily used by developers to manage and share code. It leverages Git, a distributed version control system, to track changes to code over time, enabling multiple people to work on the same project simultaneously. Go use it yourself! &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub is a web-based platform for version control and collaboration, primarily used by developers to manage and share code. It leverages Git, a distributed version control system, to track changes to code over time, enabling multiple people to work on the same project simultaneously. Download it here! &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;TransIP-hosting&lt;/strong&gt;
@@ -47,24 +47,21 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;uso-how-do-you-build-thisu-memo&#34;&gt;&lt;!-- raw HTML omitted --&gt;So, how do you build this?&lt;!-- raw HTML omitted --&gt; &amp;#x1f4dd;&lt;/h2&gt;
-&lt;h3 id=&#34;setting-up-notion&#34;&gt;Setting up Notion&lt;/h3&gt;
+&lt;h3 id=&#34;setting-up-obsidian&#34;&gt;Setting up Obsidian&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;First we start creating a page with the title of your first blog.&lt;/li&gt;
-&lt;li&gt;Go on, start typing your own blog now. &amp;#x1f525;&lt;/li&gt;
-&lt;li&gt;After writing your blog, you need to export the file to markdown. Save the file in a folder you remember, you need this folder later! &amp;#x1f4a1;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Markdown is a lightweight markup language designed to create formatted text using plain text syntax. It’s widely used because it is simple, easy to read, and can be converted to HTML or other formats for display.&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;First, create a folder called &lt;em&gt;posts&lt;/em&gt; in Obsidian where you can store all your blogposts.&lt;/li&gt;
+&lt;li&gt;Start writing your first blog post now! &amp;#x1f525;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;setting-up-hugo&#34;&gt;Setting up Hugo&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Install Git: See &lt;a href=&#34;https://github.com/git-guides/install-git&#34;&gt;Github.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Install Go: See &lt;a href=&#34;https://go.dev/dl/&#34;&gt;Go.dev&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Install Hugo: See &lt;a href=&#34;https://gohugo.io/&#34;&gt;Gohugo.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Git from &lt;a href=&#34;https://github.com/git-guides/install-git&#34;&gt;GitHub.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Go from &lt;a href=&#34;https://go.dev/dl/&#34;&gt;Go.dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Hugo from &lt;a href=&#34;https://gohugo.io/&#34;&gt;Gohugo.io&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;create-a-new-site-in-hugo&#34;&gt;Create a new site in Hugo&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Verify Hugo works&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Verify Hugo works&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Create a new site&lt;/span&gt;
@@ -75,8 +72,12 @@
 &lt;ul&gt;
 &lt;li&gt;Go have a look at &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Themes.gohugo.io/&lt;/a&gt;!
 &lt;ul&gt;
-&lt;li&gt;Every theme does have an instruction how to work with it, use this.&lt;/li&gt;
-&lt;li&gt;When you have your theme, add this as a Git submodule:&lt;/li&gt;
+&lt;li&gt;Every theme has instructions on how to use it.&lt;/li&gt;
+&lt;li&gt;When you have your theme, add this as a Git submodule:
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;Git submodule&lt;/strong&gt; is a feature in Git that allows you to include one Git repository as a subdirectory within another Git repository. It helps manage dependencies or related projects that are developed independently but need to be included in your main project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -242,7 +243,7 @@ markup:
     # style: monokai
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;copying-your-markdown-file-to-your-hugo-site&#34;&gt;Copying your Markdown file to your Hugo-site.&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;So, we have build our post in Notion? &amp;#x2705;&lt;/li&gt;
+&lt;li&gt;So, we have build our post in Obsidian? &amp;#x2705;&lt;/li&gt;
 &lt;li&gt;We set up Hugo? &amp;#x2705;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Let’s publish the post to our site then! &amp;#x1f642;&lt;/p&gt;</description>
