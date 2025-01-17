@@ -7,14 +7,18 @@ summary:
 description:
 author: "Sammie"
 cover:
-    image:
-    alt:
-    caption:
-    relative: true
-showtoc: false
+    image: "/images/about_me.jpg"
+alt:
+caption:
+relative: true
+showtoc: true
+toc: false
 draft: false
-ShowReadingTime: false
-disableShare: true
+params:
+    ShowReadingTime: true
+    disableShare: true
+    ShowCodeCopyButtons: true
+draft: false
 ---
 
 Hi there! :wave: I’m **Sam van den Biggelaar**, a 28-year-old tech enthusiast and project manager from the Netherlands. Ever since I was a kid, I’ve been fascinated by computers and technology, and that passion has stayed with me throughout my life. :man_technologist:
@@ -25,6 +29,6 @@ Outside of work, I’m passionate about :soccer:, :earth_africa:, and, unsurpris
 
 Let’s connect and share ideas about technology! :rocket::star:
 
-- [**Linkedin**](https://www.google.com)
-- [Hugo Documentation](https://gohugo.io)
-- [GitHub](https://github.com)
+- [**LinkedIn**](https://www.linkedin.com/in/samvandenbiggelaar)
+- [**Hugo Documentation**](https://gohugo.io)
+- [**GitHub**](https://github.com)

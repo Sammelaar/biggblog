@@ -1,20 +1,20 @@
 ---
 title: This is my first blog (Blog-pipeline)
-date: 2024-12-31
-catergory:
-summary:
-description:
+date: 2025-01-17
+category: 
+summary: 
+description: 
 author: Sammelaar
-cover:
+cover: 
 image:
-alt:
-caption:
+alt: 
+caption: 
 relative: true
 showtoc: true
 toc: false
 draft: false
-ShowReadingTime: false
 disableShare: true
+ShowReadingTime: true
 ShowCodeCopyButtons: true
 tags:
   - tech
@@ -23,38 +23,40 @@ tags:
   - github
   - hosting
 ---
-## <u>The goal</u> :round_pushpin:
+## <u>The Goal</u> :round_pushpin:
 
 - My goal is to create a semi-automated workflow that transforms a note from Obsidian into a webpage for a website, with version control and tracking managed through GitHub.
 ## <u>How does this blog works?</u> :man_shrugging:
 
-My blog is build with the following tools:
+My blog is built with the following tools:
 
 - **Obsidian**
-	- Obsidian is a powerful note-taking tool that focuses on building a personal knowledge base using Markdown files. It allows users to create a network of interconnected notes through links and tags, making it easy to organize and retrieve information. \n Go download it yourself! [https://obsidian.md/](https://obsidian.md/)
+	- Obsidian is a powerful note-taking tool that focuses on building a personal knowledge base using Markdown files. It allows users to create a network of interconnected notes through links and tags, making it easy to organize and retrieve information. \n Download it here! [https://obsidian.md/](https://obsidian.md/)
 - **Hugo**
-    - Hugo is a fast and flexible static site generator designed for building websites. It uses templates and markdown files to create content, making it easy to structure and organize. With its lightning-fast build times, Hugo is particularly well-suited for developers and content creators who need to generate static sites quickly and efficiently. Go download it yourself! [https://gohugo.io](https://gohugo.io/)
+    - Hugo is a fast and flexible static site generator designed for building websites. It uses templates and Markdown files to create content, making it easy to structure and organize. With its lightning-fast build times, Hugo is particularly well-suited for developers and content creators who need to generate static sites quickly and efficiently. Download it here! [https://gohugo.io](https://gohugo.io/)
 - **Custom scripts**
-    - By custom scripts the local markdown files from Obsidian will be copied to the local Hugo-site.
+    - Custom scripts copy local Markdown files from Obsidian will be copied to the local Hugo-site.
 - **GitHub**
-    - GitHub is a web-based platform for version control and collaboration, primarily used by developers to manage and share code. It leverages Git, a distributed version control system, to track changes to code over time, enabling multiple people to work on the same project simultaneously. Go use it yourself! [https://github.com](https://github.com/)
+    - GitHub is a web-based platform for version control and collaboration, primarily used by developers to manage and share code. It leverages Git, a distributed version control system, to track changes to code over time, enabling multiple people to work on the same project simultaneously. Download it here! [https://github.com](https://github.com/)
 - **TransIP-hosting**
     - TransIP is a Dutch hosting provider offering a wide range of web hosting services, including domain registration, cloud hosting, virtual private servers (VPS), and dedicated servers. Known for its reliable infrastructure and high-performance servers, TransIP allows users to easily manage their websites and online projects through an intuitive control panel.
 
 ## <u>So, how do you build this?</u> :memo:
-#### Setting up Obsidian
+### Setting up Obsidian
 
-- First we start creating a folder called _posts_ in Obsidian where you can store all your blogposts.
-- Go on, start typing your own blog now. :fire:
+- First, create a folder called _posts_ in Obsidian where you can store all your blogposts.
+- Start writing your first blog post now! :fire:
 ### Setting up Hugo
 
-- Install Git: See [Github.com](https://github.com/git-guides/install-git)
-- Install Go: See [Go.dev](https://go.dev/dl/)
-- Install Hugo: See [Gohugo.io](https://gohugo.io/)
+- Install Git from [GitHub.com](https://github.com/git-guides/install-git)
+- Install Go from [Go.dev](https://go.dev/dl/)
+- Install Hugo from [Gohugo.io](https://gohugo.io/)
 ### Create a new site in Hugo
 
 ```bash
+
 ## Verify Hugo works
+
 hugo version
 
 ## Create a new site
@@ -65,8 +67,9 @@ cd websitename
 ### Find your favorite Hugo-theme
 
 - Go have a look at [Themes.gohugo.io/](https://themes.gohugo.io/)!
-    - Every theme does have an instruction how to work with it, use this.
+	- Every theme has instructions on how to use it.
     - When you have your theme, add this as a Git submodule:
+	    - A **Git submodule** is a feature in Git that allows you to include one Git repository as a subdirectory within another Git repository. It helps manage dependencies or related projects that are developed independently but need to be included in your main project.
 
 ```bash
 ## Initialize a git repository (Make sure you are in your Hugo website directory)
@@ -377,14 +380,14 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 ### Create an repository in GitHub and connect to GitHub! :card_index_dividers:
 
-When you’re familier with GitHub you know what to do, but for the people who don’t know just use the green button!
+When you're familiar with GitHub you know what to do, but for the people who don’t know just use the green button!
 ![[image.png]]
 
 It doesn’t matter if you create a public or private repo, just start testing what fits for you! :wink:
 
 ![[image 1.png]]
 
-Repo created? Let’s use that SSH key! :closed_lock_with_key:
+Repo created? Use your SSH key to authenticate with GitHub. :closed_lock_with_key:
 
 ```bash
 ## Show the public key that is needed for GitHub
@@ -432,25 +435,26 @@ git commit -m "This is my first commit!"
 git push -u origin master
 ```
 
-Let’s check your GitHub-repo! :rocket:
+Now, check your GitHub-repo! :rocket:
 ### Deploy your GitHub-repo to your webserver! :computer:
 
 - Wrote your blog?
 - Chose your website theme?
 - Published your files to GitHub?
-- Let’s upload it to your webserver! :fire:
+- Now, upload it to your webserver! :fire:
 
 First, we need to connect to your webserver. This could be hosted by a provider or locally hosted, in my case it is hosted by a provider. :globe_with_meridians:
 
 To connect you can use a SSH key if you want. :wink:
 
 ```bash
-## To connect to my webserver I use
+## To connect to my webserver, I use
 
 ssh <username>@webserver
 ```
 
-When connected, we need to make a deployment script. This script will clone your remote GitHub-repo to this webserver and copy your Hugo public-folder to your website-folder.
+When connected, we need to make a deployment script. This script will clone your remote GitHub-repo to this webserver and copy your Hugo public-folder to your website-folder. Use nano to create this script-file! :file:
+	- **Nano** is a simple and user-friendly text editor for the command line. It is widely used on Unix-like operating systems, including Linux, because of its straightforward interface and ease of use.
 
 ```bash
 ## First, create the file by the following command:
