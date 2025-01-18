@@ -5,8 +5,8 @@ category:
 summary: 
 description: 
 author: Sammelaar
-cover: 
-image:
+cover:
+  image: "/images/blog_pipeline.png"
 alt: 
 caption: 
 relative: true
@@ -23,11 +23,15 @@ tags:
   - github
   - hosting
 ---
+## <u> Introduction </u> :speech_balloon:
+Last November, NetworkChuck dropped an [inspiring video](https://youtu.be/dnE7c0ELEH8?si=0KOi9RjaDTtLycFK) that got my gears turning. :bulb: Fast forward to 2025, and I’ve set myself an epic challenge: every month this year, I’m diving into something new in the world of IT.
+
+For January, I’m kicking things off by following Chuck’s video step by step, and I can’t wait to share what I learn. Stay tuned, because each month, a fresh blog post will drop with my latest tech adventures. Let’s make 2025 a year of leveling up together! :rocket: :man_student:
+
 ## <u>The Goal</u> :round_pushpin:
+My goal is to create a semi-automated workflow that transforms a note from Obsidian into a webpage for a website, with version control and tracking managed through GitHub.
 
-- My goal is to create a semi-automated workflow that transforms a note from Obsidian into a webpage for a website, with version control and tracking managed through GitHub.
 ## <u>How does this blog works?</u> :man_shrugging:
-
 My blog is built with the following tools:
 
 - **Obsidian**
@@ -485,3 +489,4 @@ rm -rf $TEMP_FOLDER
 echo "Deployment completed successfully!"
 ```
 ### Here you go, you own blog! :fire:
+![Alt text for the image](/images/blog_biggelaar.png)
