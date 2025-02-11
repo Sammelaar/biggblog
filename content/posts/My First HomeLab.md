@@ -1,7 +1,7 @@
 ---
 title: My First HomeLab
 date: 2025-02-11
-category: HomeLab
+category: 
 summary: 
 description: 
 author: Sammelaar
@@ -12,7 +12,7 @@ caption:
 relative: true
 showtoc: true
 toc: false
-draft: false
+draft: true
 disableShare: true
 ShowReadingTime: true
 ShowCodeCopyButtons: true
