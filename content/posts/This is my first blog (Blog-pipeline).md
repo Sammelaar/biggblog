@@ -593,14 +593,22 @@ fi
 
 # Step 7: Push all changes to the main branch
 echo "Deploying to GitHub Main..."
-
 if ! git push origin master; then
 echo "Failed to push to main branch."
 exit 1
 fi
 
-echo "All done! Site synced, processed, committed, built, and deployed."
+echo "Deploying to TransIP..."
+if ! ssh username@server; then
+echo "Failed to push to TransIP."
+exit 1
+fi
 
+# Run deploy.sh on the remote server
+echo "Executing deploy.sh on TransIP..."
+ssh username@server 'bash -s' < ./deploy.sh
+
+echo "All done! Site synced, processed, committed, built, and deployed."
 ```
 
 ### Here you go, you own blog! :fire:
