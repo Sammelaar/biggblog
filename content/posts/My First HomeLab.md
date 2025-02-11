@@ -6,7 +6,7 @@ summary:
 description: 
 author: Sammelaar
 cover:
-  image: "/images/my_first_homelab.png"
+  image: 
 alt: 
 caption: 
 relative: true

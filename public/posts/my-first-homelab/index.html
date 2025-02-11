@@ -75,9 +75,7 @@ Infrastructure: Building the Foundation of My HomeLab 🧰 Every great system st
     <meta property="article:tag" content="Docker">
     <meta property="article:tag" content="Github">
     <meta property="article:tag" content="Proxmox">
-    <meta property="og:image" content="https://blog.biggelaar.it/images/my_first_homelab.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.biggelaar.it/images/my_first_homelab.png">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="My First HomeLab">
 <meta name="twitter:description" content=" Introduction  &#x1f4ac;
 After my first blog about building this blog, I started thinking: what’s next? 🤔
@@ -119,7 +117,7 @@ Every great system starts with a solid foundation, and in the world of HomeLabs,
   "articleBody": " Introduction 💬 After my first blog about building this blog, I started thinking: what’s next? 🤔\nShould I focus on software again, or is it time to switch things up and dive into hardware? Then, an idea struck me—why not build my very own little data center? So, for February, I’m going to build my HomeLab! 🌟🚀\nInfrastructure: Building the Foundation of My HomeLab 🧰 Every great system starts with a solid foundation, and in the world of HomeLabs, that foundation is infrastructure. Before diving into complex configurations, self-hosted services, or automation, it’s crucial to design a reliable and scalable setup that meets your needs.\nIn this chapter, I’ll walk you through the key components of my HomeLab infrastructure—from hardware choices to networking, virtualisation, and storage solutions. Whether you’re just starting out or refining an existing setup, I’ll share insights, lessons learned, and best practices to help you build a robust and efficient HomeLab environment.\nSo, let’s get started by exploring the backbone of every HomeLab: it’s infrastructure! 🏗️🔧\nNetworking: The Backbone of a Reliable HomeLab! 🛜 Every HomeLab needs a connection to the world wide web so it can communicate with services and so you can use the services you build from ’the outside’. But what do you need for that? Well you’ll need a solid network infrastructure.\nWith all types of IT, you can make this as complex as you would like. I chose to make it easy and secure. Don’t make your own HomeLab to complex, if you want to change something you need to understand your own building! 😉\nFor my LAN, I chose Ubiquiti Unifi to work with. Unifi is a brand that has a solid fundament, not that complex, easy to maintain and has standard build in security. For wireless I have Aruba access points. 🛜\nHow does my configuration looks like? Virtualisation vs. Containerisation: Choosing the Right Approach for Your HomeLab. 🖥️ When setting up a HomeLab, one of the biggest decisions is how to deploy and manage your workloads. Should you run full virtual machines (VMs), leverage lightweight containers, or use a mix of both?\nVirtualisation provides isolation and flexibility, making it ideal for running multiple operating systems on a single host. Meanwhile, containerisation offers efficiency and speed, allowing for rapid deployment and scaling of applications with minimal overhead.\nIn this chapter, I’ll break down the key differences between virtualisation and containerisation, explore their pros and cons, and share how I use them in my HomeLab setup. Whether you’re looking to optimize resource usage, improve security, or experiment with new technologies, understanding these two approaches is essential for building a powerful and efficient HomeLab.\nLet’s dive in! 🚀\nHypervisor Docker Docker with VS code and GitHub gh auth login\necho YOUR_GITHUB_PERSONAL_ACCESS_TOKEN | docker login ghcr.io -u YOUR_GITHUB_USERNAME –password-stdin\ndocker build -t ghcr.io/YOUR_GITHUB_USERNAME/YOUR_IMAGE_NAME:latest .\ndocker push ghcr.io/YOUR_GITHUB_USERNAME/YOUR_IMAGE_NAME:latest\nexample: docker push ghcr.io/johndoe/myapp:latest\ndocker pull ghcr.io/YOUR_GITHUB_USERNAME/YOUR_IMAGE_NAME:latest docker run -d -p 8080:80 ghcr.io/YOUR_GITHUB_USERNAME/YOUR_IMAGE_NAME\n",
   "wordCount" : "487",
   "inLanguage": "en",
-  "image":"https://blog.biggelaar.it/images/my_first_homelab.png","datePublished": "2025-02-11T00:00:00Z",
+  "datePublished": "2025-02-11T00:00:00Z",
   "dateModified": "2025-02-11T00:00:00Z",
   "author":{
     "@type": "Person",
@@ -212,10 +210,7 @@ Every great system starts with a solid foundation, and in the world of HomeLabs,
     <div class="post-meta"><span title='2025-02-11 00:00:00 +0000 UTC'>February 11, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Sammelaar
 
 </div>
-  </header> 
-<figure class="entry-cover"><img loading="eager" src="https://blog.biggelaar.it/images/my_first_homelab.png" alt="">
-        
-</figure><div class="toc">
+  </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
             <span class="details">Table of Contents</span>
