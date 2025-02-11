@@ -30,5 +30,4 @@ Outside of work, I’m passionate about :soccer:, :earth_africa:, and, unsurpris
 Let’s connect and share ideas about technology! :rocket::star:
 
 - [**LinkedIn**](https://www.linkedin.com/in/samvandenbiggelaar)
-- [**Hugo Documentation**](https://gohugo.io)
 - [**GitHub**](https://github.com)

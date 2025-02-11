@@ -1,7 +1,7 @@
 baseURL: "https://blog.biggelaar.it/"
 languageCode: en-us
 enableEmoji: true
-defaultTheme: auto
+defaultTheme: dark
 theme: ["PaperMod"]
 
 title: BiggBlog
@@ -12,10 +12,10 @@ menu:
       name: Posts
       url: /archives/
       weight: 10
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 20
+#    - identifier: search
+#      name: Search
+#      url: /search/
+#      weight: 20
     - identifier: about
       name: About
       url: /about/
