@@ -10,6 +10,17 @@
     <atom:link href="https://blog.biggelaar.it/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First HomeLab</title>
+      <link>https://blog.biggelaar.it/posts/my-first-homelab/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.biggelaar.it/posts/my-first-homelab/</guid>
+      <description>&lt;h2 id=&#34;u-introduction-u-speech_balloon&#34;&gt;&lt;!-- raw HTML omitted --&gt; Introduction &lt;!-- raw HTML omitted --&gt; &amp;#x1f4ac;&lt;/h2&gt;
+&lt;p&gt;After my &lt;a href=&#34;https://blog.biggelaar.it/posts/this-is-my-first-blog-blog-pipeline/&#34;&gt;first blog&lt;/a&gt; about building this blog, I started thinking: what’s next? 🤔&lt;/p&gt;
+&lt;p&gt;Should I focus on software again, or is it time to switch things up and dive into hardware? Then, an idea struck me—why not build my very own little data center? So, for February, I’m going to build my HomeLab! 🌟🚀&lt;/p&gt;
+&lt;h2 id=&#34;u-infrastructure-building-the-foundation-of-my-homelab-toolboxu&#34;&gt;&lt;!-- raw HTML omitted --&gt; Infrastructure: Building the Foundation of My HomeLab &amp;#x1f9f0;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Every great system starts with a solid foundation, and in the world of HomeLabs, that foundation is &lt;strong&gt;infrastructure&lt;/strong&gt;. Before diving into complex configurations, self-hosted services, or automation, it&amp;rsquo;s crucial to design a reliable and scalable setup that meets your needs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First HomeLab</title>
       <link>https://blog.biggelaar.it/posts/posts/my-first-homelab/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.biggelaar.it/posts/posts/my-first-homelab/</guid>
