@@ -12,7 +12,7 @@ caption:
 relative: true
 showtoc: true
 toc: false
-draft: true
+draft: false
 disableShare: true
 ShowReadingTime: true
 ShowCodeCopyButtons: true
