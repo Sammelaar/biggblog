@@ -6,41 +6,13 @@
     <description>Recent content in Tags on BiggBlog</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.biggelaar.it/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Docker</title>
-      <link>https://blog.biggelaar.it/tags/docker/</link>
-      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.biggelaar.it/tags/docker/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Github</title>
       <link>https://blog.biggelaar.it/tags/github/</link>
-      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.biggelaar.it/tags/github/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Homelab</title>
-      <link>https://blog.biggelaar.it/tags/homelab/</link>
-      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.biggelaar.it/tags/homelab/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Proxmox</title>
-      <link>https://blog.biggelaar.it/tags/proxmox/</link>
-      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.biggelaar.it/tags/proxmox/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech</title>
-      <link>https://blog.biggelaar.it/tags/tech/</link>
-      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.biggelaar.it/tags/tech/</guid>
       <description></description>
     </item>
     <item>
@@ -62,6 +34,13 @@
       <link>https://blog.biggelaar.it/tags/obsidian/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.biggelaar.it/tags/obsidian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://blog.biggelaar.it/tags/tech/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.biggelaar.it/tags/tech/</guid>
       <description></description>
     </item>
   </channel>
