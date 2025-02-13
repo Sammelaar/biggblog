@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.biggelaar.it/</loc>
+    <loc>https://blog.innocloud.io/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/posts/</loc>
+    <loc>https://blog.innocloud.io/posts/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/tags/github/</loc>
+    <loc>https://blog.innocloud.io/tags/github/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/tags/hosting/</loc>
+    <loc>https://blog.innocloud.io/tags/hosting/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/tags/hugo/</loc>
+    <loc>https://blog.innocloud.io/tags/hugo/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/tags/obsidian/</loc>
+    <loc>https://blog.innocloud.io/tags/obsidian/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/tags/</loc>
+    <loc>https://blog.innocloud.io/tags/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/tags/tech/</loc>
+    <loc>https://blog.innocloud.io/tags/tech/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/posts/this-is-my-first-blog-blog-pipeline/</loc>
+    <loc>https://blog.innocloud.io/posts/this-is-my-first-blog-blog-pipeline/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.biggelaar.it/about/</loc>
+    <loc>https://blog.innocloud.io/about/</loc>
   </url><url>
-    <loc>https://blog.biggelaar.it/categories/</loc>
+    <loc>https://blog.innocloud.io/categories/</loc>
   </url><url>
-    <loc>https://blog.biggelaar.it/archives/</loc>
+    <loc>https://blog.innocloud.io/archives/</loc>
   </url><url>
-    <loc>https://blog.biggelaar.it/search/</loc>
+    <loc>https://blog.innocloud.io/search/</loc>
   </url>
 </urlset>
