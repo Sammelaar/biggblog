@@ -420,7 +420,7 @@ By using the following commands, you’ll adding your local Git-repo to GitHub:
 ```bash
 ## First, add a remote Git-repository.
 
-git remote add origin git@github.com:Sammelaar/biggblog.git
+git remote add origin git@github.com:Username/repository.git
 
 ## Be sure your Markdown-files are converted by Hugo!
 
@@ -560,7 +560,7 @@ fi
 # Step 4: Build the Hugo site
 echo "Building the Hugo site..."
 
-cd /Users/biggmac/BiggBlog
+cd /Users/User/Folder
 
 if [ ! -f "config.toml" ] && [ ! -f "config.yaml" ] && [ ! -f "config.json" ]; then
 echo "Error: Hugo config file not found. Did you initialize the Hugo site?"
