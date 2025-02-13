@@ -45,7 +45,7 @@ params:
       url: "https://www.linkedin.com/in/samvandenbiggelaar"
 
   label:
-    text: "BiggBlog"
+    text: "InnoBlog"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
