@@ -4,7 +4,7 @@ enableEmoji: true
 defaultTheme: dark
 theme: ["PaperMod"]
 
-title: InnoBlog
+title: InnoCloud.io
 
 menu:
   main:
@@ -45,7 +45,7 @@ params:
       url: "https://www.linkedin.com/in/samvandenbiggelaar"
 
   label:
-    text: "InnoBlog"
+    text: "BiggBlog"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
