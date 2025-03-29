@@ -7,7 +7,7 @@ summary:
 description:
 author: "Sammie"
 cover:
-    image: "/images/about_me.jpg"
+    image: "/images/about_me.png"
 alt:
 caption:
 relative: true
