@@ -6,7 +6,7 @@ summary:
 description: 
 author: Sammelaar
 cover:
-  image: "/images/blog_pipeline.png"
+  image: "/images/cover_blogpipeline.png"
 alt: 
 caption: 
 relative: true
@@ -30,7 +30,7 @@ For January, I’m kicking things off by following Chuck’s video step by step,
 
 ## <u>The Goal</u> :round_pushpin:
 My goal is to create a semi-automated workflow that transforms a note from Obsidian into a webpage for a website, with version control and tracking managed through GitHub.
-
+![[blog_pipeline.png]]
 ## <u>How does this blog works?</u> :man_shrugging:
 My blog is built with the following tools:
 
@@ -290,7 +290,7 @@ hugo server -t themename
 When used the command go to: localhost:1313 in your browser and have a look. :eyes:
 ### Missing your images? :framed_picture:
 
-You worked hard, wrote a lot of text, used a lot of images and then… :boom: nog images, just test.png… No worries! Again, let me help your with a script to copy the images to the right folder in your Hugo-structure.
+You worked hard, wrote a lot of text, used a lot of images and then… :boom: no images, just test.png… No worries! Again, let me help your with a script to copy the images to the right folder in your Hugo-structure.
 ### Windows :window:
 
 ```powershell
