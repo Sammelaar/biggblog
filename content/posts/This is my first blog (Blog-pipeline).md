@@ -30,7 +30,7 @@ For January, I’m kicking things off by following Chuck’s video step by step,
 
 ## <u>The Goal</u> :round_pushpin:
 My goal is to create a semi-automated workflow that transforms a note from Obsidian into a webpage for a website, with version control and tracking managed through GitHub.
-![[blog_pipeline.png]]
+![Image Description](/images/blog_pipeline.png)
 ## <u>How does this blog works?</u> :man_shrugging:
 My blog is built with the following tools:
 
