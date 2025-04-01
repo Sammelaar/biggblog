@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>What is Docker and why should you use it? 🐳 | InnoCloud.io</title>
+<meta name="keywords" content="tech, homelab, docker, github">
+<meta name="description" content="What is Docker and why should you use it? 🐳 💻
+Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely blow your mind.
+I still remember the first time I used Docker. I packaged my app into a container, ran it, and it just worked. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.">
+<meta name="author" content="Sammelaar">
+<link rel="canonical" href="https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.innocloud.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.innocloud.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.innocloud.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.innocloud.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.innocloud.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/">
+  <meta property="og:site_name" content="InnoCloud.io">
+  <meta property="og:title" content="What is Docker and why should you use it? 🐳">
+  <meta property="og:description" content="What is Docker and why should you use it? 🐳 💻 Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely blow your mind.
+I still remember the first time I used Docker. I packaged my app into a container, ran it, and it just worked. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-27T00:00:00+00:00">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Github">
+    <meta property="og:image" content="https://blog.innocloud.io/images/cover_docker.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.innocloud.io/images/cover_docker.png">
+<meta name="twitter:title" content="What is Docker and why should you use it? 🐳">
+<meta name="twitter:description" content="What is Docker and why should you use it? 🐳 💻
+Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely blow your mind.
+I still remember the first time I used Docker. I packaged my app into a container, ran it, and it just worked. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.innocloud.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "What is Docker and why should you use it? 🐳",
+      "item": "https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What is Docker and why should you use it? 🐳",
+  "name": "What is Docker and why should you use it? 🐳",
+  "description": "What is Docker and why should you use it? 🐳 💻 Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely blow your mind.\nI still remember the first time I used Docker. I packaged my app into a container, ran it, and it just worked. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.\n",
+  "keywords": [
+    "tech", "homelab", "docker", "github"
+  ],
+  "articleBody": "What is Docker and why should you use it? 🐳 💻 Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely blow your mind.\nI still remember the first time I used Docker. I packaged my app into a container, ran it, and it just worked. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.\nSo if you’re new to Docker or just Docker-curious — buckle up. I’m gonna break it down, hype it up, and show you why I’m obsessed with it.\nWhat is Docker, Anyway? 🤔 Docker is a platform that lets you package your application — code, dependencies, environment, and all — into something called a container.\nThink of a container like a lightweight, portable box that holds your app. Wherever you move it — your laptop, a server, the cloud — it runs exactly the same. No surprises. No weird config errors. Just smooth, repeatable magic.\nIt’s like sending your app to production with its own survival kit. 🧳\nWhy Docker is a Total Game-Changer 🔥 Before Docker, building and running apps across different environments was like herding cats. 🐱\nYou’d install dependencies, tweak settings, deal with OS differences, and still end up with stuff breaking on production even though it worked on dev.\nDocker came along and said:\n“Hey, what if we could bundle everything your app needs into a single, consistent unit that runs the same anywhere?”\nYes please. 🙌\nHere’s why I (and millions of developers) love Docker:\n✅ Consistency – No more “works on my machine” drama\n✅ Portability – Move containers between systems effortlessly\n✅ Isolation – Each app lives in its own sandbox 🏖️\n✅ Speed – Containers spin up in seconds\n✅ Efficiency – Use fewer resources than full-blown virtual machines\nHow Containers Work 🧱✨ Containers are kind of like tiny, lightweight virtual machines — except way faster and more efficient.\nThey don’t carry a full operating system like a VM does. Instead, they share the host machine’s OS kernel but keep everything else isolated: your app, libraries, runtime, configs — the works.\nYou can run dozens of containers on a single machine without breaking a sweat.\nThink of it like this:\n💾 VMs = full apartments (heavy, separate utilities)\n📦 Containers = tiny studio pods (efficient, self-contained)\nDocker in Action: A Simple Example 💡 Let’s say you have a small Python script called app.py. Here’s how you could run it in Docker:\nStep 1: Create a Dockerfile\nCopyEdit `FROM python:3.10 WORKDIR /app COPY app.py . CMD [\"python\", \"app.py\"]` Step 2: Build your Docker image\nCopyEdit `docker build -t my-python-app . Step 3: Run your container\nCopyEdit `docker run my-python-app` BOOM 💥 — your app is running in its own container. No messy setup. No environment juggling. Just clean, contained execution.\nFinal Thoughts 💭 Docker changed the way I build and deploy apps. Whether I’m working on side projects or rolling out microservices in production, Docker gives me consistency, confidence, and serious speed.\nIf you’re a developer, sysadmin, or just someone who loves solving problems with clean tools — Docker is 100% worth learning.\nComing up next:\n➡️ _Getting Started with Docker: Install Docker and where I use it for. — We’ll install Docker and run your first real container in minutes. You’re gonna love it.\nLet’s goooo 🚀🐳\n",
+  "wordCount" : "568",
+  "inLanguage": "en",
+  "image":"https://blog.innocloud.io/images/cover_docker.png","datePublished": "2025-02-27T00:00:00Z",
+  "dateModified": "2025-02-27T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sammelaar"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InnoCloud.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.innocloud.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.innocloud.io/" accesskey="h" title="BiggBlog (Alt + H)">
+                <img src="https://blog.innocloud.io/apple-touch-icon.png" alt="" aria-label="logo"
+                    height="35">BiggBlog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.innocloud.io/archives/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      What is Docker and why should you use it? 🐳
+    </h1>
+    <div class="post-meta"><span title='2025-02-27 00:00:00 +0000 UTC'>February 27, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Sammelaar
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="eager" src="https://blog.innocloud.io/images/cover_docker.png" alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#uwhat-is-docker-and-why-should-you-use-itu--" aria-label="What is Docker and why should you use it? 🐳 💻">What is Docker and why should you use it? 🐳 💻</a><ul>
+                        
+                <li>
+                    <a href="#whatisdocker-anyway-" aria-label="What is Docker, Anyway? 🤔">What is Docker, Anyway? 🤔</a></li>
+                <li>
+                    <a href="#why-docker-is-a-total-game-changer-" aria-label="Why Docker is a Total Game-Changer 🔥">Why Docker is a Total Game-Changer 🔥</a></li>
+                <li>
+                    <a href="#how-containers-work-" aria-label="How Containers Work 🧱✨">How Containers Work 🧱✨</a></li>
+                <li>
+                    <a href="#docker-in-action-a-simple-example-" aria-label="Docker in Action: A Simple Example 💡">Docker in Action: A Simple Example 💡</a></li>
+                <li>
+                    <a href="#final-thoughts-" aria-label="Final Thoughts 💭">Final Thoughts 💭</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="uwhat-is-docker-and-why-should-you-use-itu--"><!-- raw HTML omitted -->What is Docker and why should you use it?<!-- raw HTML omitted --> 🐳 💻<a hidden class="anchor" aria-hidden="true" href="#uwhat-is-docker-and-why-should-you-use-itu--">#</a></h2>
+<p>Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely <strong>blow your mind</strong>.</p>
+<p>I still remember the first time I used Docker. I packaged my app into a container, ran it, and it <em>just worked</em>. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.</p>
+<p>So if you’re new to Docker or just Docker-curious — buckle up. I’m gonna break it down, hype it up, and show you why I’m obsessed with it.</p>
+<hr>
+<h3 id="whatisdocker-anyway-">What is Docker, Anyway? 🤔<a hidden class="anchor" aria-hidden="true" href="#whatisdocker-anyway-">#</a></h3>
+<p>Docker is a platform that lets you package your application — code, dependencies, environment, and all — into something called a <strong>container</strong>.</p>
+<p>Think of a container like a lightweight, portable box that holds your app. Wherever you move it — your laptop, a server, the cloud — it runs <strong>exactly</strong> the same. No surprises. No weird config errors. Just smooth, repeatable magic.</p>
+<p>It’s like sending your app to production with its own survival kit. 🧳</p>
+<hr>
+<h3 id="why-docker-is-a-total-game-changer-">Why Docker is a Total Game-Changer 🔥<a hidden class="anchor" aria-hidden="true" href="#why-docker-is-a-total-game-changer-">#</a></h3>
+<p>Before Docker, building and running apps across different environments was like herding cats. 🐱</p>
+<p>You’d install dependencies, tweak settings, deal with OS differences, and still end up with stuff breaking on production even though it worked on dev.</p>
+<p>Docker came along and said:</p>
+<blockquote>
+<p>“Hey, what if we could bundle <em>everything</em> your app needs into a single, consistent unit that runs the same anywhere?”</p>
+</blockquote>
+<p>Yes please. 🙌</p>
+<p>Here’s why I (and millions of developers) love Docker:</p>
+<p>✅ <strong>Consistency</strong> – No more “works on my machine” drama<br>
+✅ <strong>Portability</strong> – Move containers between systems effortlessly<br>
+✅ <strong>Isolation</strong> – Each app lives in its own sandbox 🏖️<br>
+✅ <strong>Speed</strong> – Containers spin up in seconds<br>
+✅ <strong>Efficiency</strong> – Use fewer resources than full-blown virtual machines</p>
+<hr>
+<h3 id="how-containers-work-">How Containers Work 🧱✨<a hidden class="anchor" aria-hidden="true" href="#how-containers-work-">#</a></h3>
+<p>Containers are kind of like tiny, lightweight virtual machines — except way faster and more efficient.</p>
+<p>They don’t carry a full operating system like a VM does. Instead, they share the host machine’s OS kernel but keep everything else isolated: your app, libraries, runtime, configs — the works.</p>
+<p>You can run <strong>dozens</strong> of containers on a single machine without breaking a sweat.</p>
+<p>Think of it like this:</p>
+<ul>
+<li>
+<p>💾 VMs = full apartments (heavy, separate utilities)</p>
+</li>
+<li>
+<p>📦 Containers = tiny studio pods (efficient, self-contained)</p>
+</li>
+</ul>
+<hr>
+<h3 id="docker-in-action-a-simple-example-">Docker in Action: A Simple Example 💡<a hidden class="anchor" aria-hidden="true" href="#docker-in-action-a-simple-example-">#</a></h3>
+<p>Let’s say you have a small Python script called <code>app.py</code>. Here’s how you could run it in Docker:</p>
+<p><strong>Step 1: Create a <code>Dockerfile</code></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">Copy</span>Edit<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">`</span>FROM python:3.10  WORKDIR /app  COPY app.py .  CMD <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;python&#34;</span>, <span style="color:#e6db74">&#34;app.py&#34;</span><span style="color:#f92672">]</span><span style="color:#e6db74">`</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p><strong>Step 2: Build your Docker image</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CopyEdit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>docker build -t my-python-app .
+</span></span></code></pre></div><p><strong>Step 3: Run your container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CopyEdit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>docker run my-python-app<span style="color:#e6db74">`</span>
+</span></span></code></pre></div><p>BOOM 💥 — your app is running in its own container. No messy setup. No environment juggling. Just clean, contained execution.</p>
+<hr>
+<h3 id="final-thoughts-">Final Thoughts 💭<a hidden class="anchor" aria-hidden="true" href="#final-thoughts-">#</a></h3>
+<p>Docker changed the way I build and deploy apps. Whether I’m working on side projects or rolling out microservices in production, Docker gives me consistency, confidence, and serious speed.</p>
+<p>If you’re a developer, sysadmin, or just someone who loves solving problems with clean tools — Docker is 100% worth learning.</p>
+<p><strong>Coming up next:</strong><br>
+➡️ _Getting Started with Docker: Install Docker and where I use it for. — We’ll install Docker and run your first real container in minutes. You’re gonna love it.</p>
+<p>Let’s goooo 🚀🐳</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.innocloud.io/tags/tech/">Tech</a></li>
+      <li><a href="https://blog.innocloud.io/tags/homelab/">Homelab</a></li>
+      <li><a href="https://blog.innocloud.io/tags/docker/">Docker</a></li>
+      <li><a href="https://blog.innocloud.io/tags/github/">Github</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://blog.innocloud.io/">InnoCloud.io</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
