@@ -1,12 +1,12 @@
 ---
-title: This is my first blog (Blog-pipeline)
+title: This is my first blog!
 date: 2025-01-17
 category: 
 summary: 
 description: 
 author: Sammelaar
 cover:
-  image: "/images/cover_blogpipeline.png"
+  image: /images/cover_blogpipeline.png
 alt: 
 caption: 
 relative: true
