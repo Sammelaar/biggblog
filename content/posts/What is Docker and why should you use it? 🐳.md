@@ -77,25 +77,18 @@ Let’s say you have a small Python script called `app.py`. Here’s how you co
 **Step 1: Create a `Dockerfile`**
 
 ```Dockerfile
-CopyEdit
-
 `FROM python:3.10  WORKDIR /app  COPY app.py .  CMD ["python", "app.py"]`
-
 ```
 
 **Step 2: Build your Docker image**
 
 ```bash
-CopyEdit
-
 `docker build -t my-python-app .
 ```
 
 **Step 3: Run your container**
 
 ```bash
-CopyEdit
-
 `docker run my-python-app`
 ```
 
