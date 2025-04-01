@@ -6,7 +6,7 @@ summary:
 description: 
 author: Sammelaar
 cover:
-  image: /images/cover_blogpipeline.png
+  image: /images/cover/cover_blogpipeline.png
 alt: 
 caption: 
 relative: true
