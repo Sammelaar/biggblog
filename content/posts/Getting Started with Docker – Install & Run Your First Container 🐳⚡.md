@@ -6,7 +6,7 @@ summary:
 description: The moment your dev setup stops being messy
 author: Sammelaar
 cover:
-  image: /images/cover/cover_docker2.png
+  image: /images/cover_docker2.png
 alt: 
 caption: 
 relative: true

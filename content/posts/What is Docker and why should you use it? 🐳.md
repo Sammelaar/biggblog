@@ -6,7 +6,7 @@ summary:
 description: 
 author: Sammelaar
 cover:
-  image: /images/cover/cover_docker1.png
+  image: /images/cover_docker1.png
 alt: 
 caption: 
 relative: true
