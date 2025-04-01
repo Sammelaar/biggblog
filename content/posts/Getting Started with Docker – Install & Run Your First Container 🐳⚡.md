@@ -137,10 +137,7 @@ You didn’t cry.
 
 ## 🚀 What’s Next?
 
-Now that you’ve run a container, let’s build one of your own!
+Now that you’ve run a container, let’s build some Infrastructure with Code! 🏗️
 
-Coming up next:
-**🛠️ Your First Docker App – Build & Run a Container from Scratch**  
-We’ll write a simple app, create a Dockerfile, and run it like a boss.
-
-> Got questions or stuck on setup? Drop a comment or reach out — I love helping devs get their first container up and running 🧑‍💻💬
+**Coming up next:**
+➡️**🛠️ Intro to Docker Compose – Managing Multi-Container Apps Like a Boss** — We’ll start using compose-files, Infrastructure as Code and run it like a boss.
