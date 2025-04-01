@@ -12,10 +12,6 @@ menu:
       name: Posts
       url: /archives/
       weight: 10
-#    - identifier: search
-#      name: Search
-#      url: /search/
-#      weight: 20
     - identifier: about
       name: About
       url: /about/
