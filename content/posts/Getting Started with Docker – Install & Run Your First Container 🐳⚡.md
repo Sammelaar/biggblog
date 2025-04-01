@@ -141,4 +141,4 @@ Now that you’ve run a container, let’s build some Infrastructure with Code! 
 
 **Coming up next:**
 
-➡️**🛠️ Intro to Docker Compose – Managing Multi-Container Apps Like a Boss** — We’ll start using compose-files, Infrastructure as Code and run it like a boss.
+➡️ **🛠️ Intro to Docker Compose – Managing Multi-Container Apps Like a Boss** — We’ll start using compose-files, Infrastructure as Code and run it like a boss.
