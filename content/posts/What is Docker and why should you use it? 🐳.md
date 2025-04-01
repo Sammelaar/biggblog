@@ -100,6 +100,7 @@ Docker changed the way I build and deploy apps. Whether I’m working on side pr
 If you’re a developer, sysadmin, or just someone who loves solving problems with clean tools — Docker is 100% worth learning.
 
 **Coming up next:**  
+
 ➡️ **Getting Started with Docker: Install Docker and where I use it for.** — We’ll install Docker and run your first real container in minutes. You’re gonna love it.
 
 Let’s goooo 🚀🐳
