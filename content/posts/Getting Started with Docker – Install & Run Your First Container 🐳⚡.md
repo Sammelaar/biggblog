@@ -3,7 +3,7 @@ title:  Getting Started with Docker – Install & Run Your First Container 🐳�
 date: 2025-03-28
 category: 
 summary: 
-description: The moment your dev setup stops being messy
+description:
 author: Sammelaar
 cover:
   image: /images/cover_docker2.png
