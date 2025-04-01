@@ -18,11 +18,10 @@ ShowReadingTime: true
 ShowCodeCopyButtons: true
 tags:
   - tech
-  - homelab
   - docker
   - github
 ---
-## <u>What is Docker and why should you use it?</u> 🐳 💻
+## What is Docker and why should you use it?🐳 💻
 Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely **blow your mind**.
 
 I still remember the first time I used Docker. I packaged my app into a container, ran it, and it _just worked_. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.

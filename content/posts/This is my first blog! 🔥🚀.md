@@ -1,5 +1,5 @@
 ---
-title: This is my first blog!
+title: This is my first blog! 🔥🚀
 date: 2025-01-17
 category: 
 summary: 
@@ -23,15 +23,15 @@ tags:
   - github
   - hosting
 ---
-## <u> Introduction </u> :speech_balloon:
+# This is my first blog! 🔥🚀
 Last November, NetworkChuck dropped an [inspiring video](https://youtu.be/dnE7c0ELEH8?si=0KOi9RjaDTtLycFK) that got my gears turning. :bulb: Fast forward to 2025, and I’ve set myself an epic challenge: every month this year, I’m diving into something new in the world of IT.
 
 For January, I’m kicking things off by following Chuck’s video step by step, and I can’t wait to share what I learn. Stay tuned, because each month, a fresh blog post will drop with my latest tech adventures. Let’s make 2025 a year of leveling up together! :rocket: :man_student:
 
-## <u>The Goal</u> :round_pushpin:
+## The Goal :round_pushpin:
 My goal is to create a semi-automated workflow that transforms a note from Obsidian into a webpage for a website, with version control and tracking managed through GitHub.
 ![Image Description](/images/blog_pipeline.png)
-## <u>How does this blog works?</u> :man_shrugging:
+## How does this blog works? :man_shrugging:
 My blog is built with the following tools:
 
 - **Obsidian**
@@ -45,7 +45,7 @@ My blog is built with the following tools:
 - **TransIP-hosting**
     - TransIP is a Dutch hosting provider offering a wide range of web hosting services, including domain registration, cloud hosting, virtual private servers (VPS), and dedicated servers. Known for its reliable infrastructure and high-performance servers, TransIP allows users to easily manage their websites and online projects through an intuitive control panel.
 
-## <u>So, how do you build this?</u> :memo:
+## So, how do you build this? :memo:
 ### Setting up Obsidian
 
 - First, create a folder called _posts_ in Obsidian where you can store all your blogposts.
@@ -371,7 +371,7 @@ for filename in os.listdir(posts_dir):
 
 print("Markdown files processed and images copied successfully.")
 ```
-## <u>Optional: Save your code to GitHub!</u>:octopus:
+## Optional: Save your code to GitHub! :octopus:
 
 ### Generate an SSH key (Mac/Linux/Windows) :key:
 
