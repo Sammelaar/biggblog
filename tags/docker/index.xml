@@ -13,20 +13,30 @@
       <link>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container-/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container-/</guid>
-      <description>&lt;h1 id=&#34;getting-started-with-docker--install--run-your-first-container-&#34;&gt;Getting Started with Docker – Install &amp;amp; Run Your First Container 🐳⚡&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;AKA: The moment your dev setup stops being messy&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;So you’ve heard about Docker. Maybe you read my last post and now you’re pumped to try it out (if not, check out &lt;a href=&#34;https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/&#34;&gt;What is Docker?&lt;/a&gt; — it’s a good one 👀).&lt;br&gt;
+      <description>&lt;p&gt;So you’ve heard about Docker. Maybe you read my last post and now you’re pumped to try it out (if not, check out &lt;a href=&#34;https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/&#34;&gt;What is Docker?&lt;/a&gt; — it’s a good one 👀).&lt;br&gt;
 Today, we’re not just talking about Docker — we’re gonna &lt;strong&gt;use it&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;By the end of this post, you’ll have Docker installed, your first container running, and the confidence to start experimenting like a pro.&lt;/p&gt;</description>
+&lt;p&gt;By the end of this post, you’ll have Docker installed, your first container running, and the confidence to start experimenting like a pro.&lt;/p&gt;
+&lt;p&gt;Let’s goooo! 🚀&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-youll-learn&#34;&gt;🧠 What You’ll Learn&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;How to install Docker on Windows, macOS, or Linux&lt;/li&gt;
+&lt;li&gt;How to verify that Docker is working&lt;/li&gt;
+&lt;li&gt;How to run your first container with a single command&lt;/li&gt;
+&lt;li&gt;A few cool commands to get you comfy with Docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-1-install-docker-&#34;&gt;Step 1: Install Docker 🧰&lt;/h2&gt;
+&lt;p&gt;Let’s get Docker on your machine. The setup is super simple.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What is Docker and why should you use it? 🐳</title>
       <link>https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/</guid>
-      <description>&lt;h2 id=&#34;what-is-docker-and-why-should-you-use-it-&#34;&gt;What is Docker and why should you use it?🐳 💻&lt;/h2&gt;
-&lt;p&gt;Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely &lt;strong&gt;blow your mind&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;I still remember the first time I used Docker. I packaged my app into a container, ran it, and it &lt;em&gt;just worked&lt;/em&gt;. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely &lt;strong&gt;blow your mind&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I still remember the first time I used Docker. I packaged my app into a container, ran it, and it &lt;em&gt;just worked&lt;/em&gt;. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.&lt;/p&gt;
+&lt;p&gt;So if you’re new to Docker or just Docker-curious — buckle up. I’m gonna break it down, hype it up, and show you why I’m obsessed with it.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
