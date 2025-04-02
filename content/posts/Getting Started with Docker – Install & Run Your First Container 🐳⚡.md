@@ -21,9 +21,6 @@ tags:
   - docker
   - github
 ---
-# Getting Started with Docker – Install & Run Your First Container 🐳⚡  
-*AKA: The moment your dev setup stops being messy*
-
 So you’ve heard about Docker. Maybe you read my last post and now you’re pumped to try it out (if not, check out [What is Docker?](https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/) — it’s a good one 👀).  
 Today, we’re not just talking about Docker — we’re gonna **use it**.
 
