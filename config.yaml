@@ -53,7 +53,8 @@ params:
     home:
       - HTML
       - RSS
-      - JSON # necessary for search
+      - JSON
+
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
