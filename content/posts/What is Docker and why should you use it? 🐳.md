@@ -11,6 +11,7 @@ alt:
 caption: 
 relative: true
 showtoc: true
+searchHidden: false
 toc: false
 draft: false
 disableShare: true

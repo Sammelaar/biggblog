@@ -54,7 +54,6 @@ params:
       - HTML
       - RSS
       - JSON # necessary for search
-
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
