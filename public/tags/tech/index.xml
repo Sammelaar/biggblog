@@ -6,12 +6,12 @@
     <description>Recent content in Tech on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪</title>
       <link>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/</link>
-      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/</guid>
       <description>&lt;p&gt;&lt;em&gt;Secure all your Docker services with auto-magic HTTPS&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;So you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:&lt;/p&gt;
