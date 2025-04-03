@@ -6,8 +6,20 @@
     <description>Recent content in Github on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to Docker Compose – Managing Multi-Container Apps Like a Boss 🧩🐳</title>
+      <link>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss-/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss-/</guid>
+      <description>&lt;p&gt;&lt;em&gt;No more &lt;code&gt;docker run&lt;/code&gt; madness — time to go pro&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Alright, so you’ve built your first Docker container. Maybe two.&lt;br&gt;
+Then you added a database. And maybe a web UI to manage them.&lt;br&gt;
+Suddenly you’ve got 3–4 containers, each with long commands, port mappings, volume mounts… and it’s starting to feel like your terminal needs therapy. 😅&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Enter: Docker Compose.&lt;/strong&gt;&lt;br&gt;
+Compose is your way to manage multi-container apps like a BOSS — with one clean YAML file and a single command. Let’s go.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Getting Started with Docker – Install &amp; Run Your First Container 🐳⚡</title>
       <link>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container-/</link>
