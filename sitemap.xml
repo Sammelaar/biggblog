@@ -3,24 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.innocloud.io/tags/docker/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container-/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/github/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss-/</loc>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/posts/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/tech/</loc>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container-/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/</loc>
