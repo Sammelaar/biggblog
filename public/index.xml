@@ -6,8 +6,21 @@
     <description>Recent content on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪</title>
+      <link>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Secure all your Docker services with auto-magic HTTPS&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Wait… I have 5 apps and they all want to use port 80 or 443 😅”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Enter &lt;strong&gt;Traefik&lt;/strong&gt; — the magical, self-configuring reverse proxy for Docker.&lt;br&gt;
+You define a few labels, let it read your Docker socket, and BOOM — instant routing, SSL, dashboards, load balancing… all in real-time. 🤯&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Intro to Docker Compose – Managing Multi-Container Apps Like a Boss 🧩🐳</title>
       <link>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss-/</link>

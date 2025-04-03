@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪 | InnoCloud.io</title>
+<meta name="keywords" content="tech, docker, github">
+<meta name="description" content="Secure all your Docker services with auto-magic HTTPS
+So you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:
+
+“Wait… I have 5 apps and they all want to use port 80 or 443 😅”
+
+Enter Traefik — the magical, self-configuring reverse proxy for Docker.
+You define a few labels, let it read your Docker socket, and BOOM — instant routing, SSL, dashboards, load balancing… all in real-time. 🤯">
+<meta name="author" content="Sammelaar">
+<link rel="canonical" href="https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.innocloud.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.innocloud.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.innocloud.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.innocloud.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.innocloud.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/">
+  <meta property="og:site_name" content="InnoCloud.io">
+  <meta property="og:title" content="Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪">
+  <meta property="og:description" content="Secure all your Docker services with auto-magic HTTPS
+So you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:
+“Wait… I have 5 apps and they all want to use port 80 or 443 😅”
+Enter Traefik — the magical, self-configuring reverse proxy for Docker.
+You define a few labels, let it read your Docker socket, and BOOM — instant routing, SSL, dashboards, load balancing… all in real-time. 🤯">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-03T00:00:00+00:00">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Github">
+    <meta property="og:image" content="https://blog.innocloud.io/images/cover_traefik.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.innocloud.io/images/cover_traefik.png">
+<meta name="twitter:title" content="Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪">
+<meta name="twitter:description" content="Secure all your Docker services with auto-magic HTTPS
+So you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:
+
+“Wait… I have 5 apps and they all want to use port 80 or 443 😅”
+
+Enter Traefik — the magical, self-configuring reverse proxy for Docker.
+You define a few labels, let it read your Docker socket, and BOOM — instant routing, SSL, dashboards, load balancing… all in real-time. 🤯">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.innocloud.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪",
+      "item": "https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪",
+  "name": "Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪",
+  "description": "Secure all your Docker services with auto-magic HTTPS\nSo you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:\n“Wait… I have 5 apps and they all want to use port 80 or 443 😅”\nEnter Traefik — the magical, self-configuring reverse proxy for Docker.\nYou define a few labels, let it read your Docker socket, and BOOM — instant routing, SSL, dashboards, load balancing… all in real-time. 🤯\n",
+  "keywords": [
+    "tech", "docker", "github"
+  ],
+  "articleBody": "Secure all your Docker services with auto-magic HTTPS\nSo you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:\n“Wait… I have 5 apps and they all want to use port 80 or 443 😅”\nEnter Traefik — the magical, self-configuring reverse proxy for Docker.\nYou define a few labels, let it read your Docker socket, and BOOM — instant routing, SSL, dashboards, load balancing… all in real-time. 🤯\nLet’s walk through how to install Traefik in Docker Compose, use it to route traffic to containers like Portainer — without ever touching nginx.conf and secure it by HTTPS with a certificate.\nThanks to Let’s Encrypt and Traefik’s built-in TLS support, it’s easier than ever. Let’s upgrade your setup and make your apps production-worthy 🔒🚀\n🧠 What You’ll Learn What Traefik is and why it rocks 🤘 How to install it using Docker Compose How to expose services like Portainer through Traefik A simple example using Docker labels How to enable HTTPS in Traefik with Let’s Encrypt How to use docker-compose with separate files for Traefik and Portainer How to set up secure routing with TLS and valid SSL certs How to test it locally with a self-signed wildcard domain 🤔 What is Traefik? Traefik is a modern reverse proxy and load balancer built specifically for microservices and container setups. It monitors your Docker environment, watches for labels on containers, and automatically routes traffic to them based on rules you define.\nIn plain English: You give your app a label like: traefik.http.routers.myapp.rule=Host(myapp.local) Traefik goes: “Got it! Routing traffic for myapp.local to this container!” You didn’t write any config files. It just works. 😍 💡 How It Works Traefik reads labels from your containers via the Docker socket It creates a router based on Host() rules The entrypoint web listens on port 80 The dashboard is enabled at localhost:8080 Only services with traefik.enable=true are exposed 🔒 🧪 Folder Structure Same clean layout:\ndocker/ ├── traefik/ │ ├── docker-compose.yml │ ├── traefik.yml │ └── acme.json (auto-generated cert storage) ├── portainer/ │ └── docker-compose.yml ⚙️ Step 1: Updated Traefik Config with HTTPS 📄 traefik/docker-compose.yml version: \"3.8\" services: traefik: image: traefik:v2.10 container_name: traefik command: - \"--providers.file.filename=/etc/traefik/traefik.yml\" ports: - \"80:80\" - \"443:443\" - \"8080:8080\" volumes: - ./traefik.yml:/etc/traefik/traefik.yml:ro - ./acme.json:/acme.json - /var/run/docker.sock:/var/run/docker.sock:ro networks: - traefik networks: traefik: name: traefik ⚠️ Important:\nBefore starting Traefik, create the acme.json file and lock down the permissions:\ntouch acme.json chmod 600 acme.json 🧾 traefik/traefik.yml entryPoints: web: address: \":80\" websecure: address: \":443\" providers: docker: exposedByDefault: false file: filename: /etc/traefik/traefik.yml certificatesResolvers: letsencrypt: acme: email: your-email@example.com storage: /acme.json httpChallenge: entryPoint: web api: dashboard: true insecure: true # Remove in production! 🔐 This config:\nSets up two entry points: HTTP (web) and HTTPS (websecure) Enables the Let’s Encrypt resolver called letsencrypt Uses the HTTP challenge (port 80) for cert verification 🛠 Step 2: Secure Portainer with HTTPS 📄 portainer/docker-compose.yml version: \"3.8\" services: portainer: image: portainer/portainer-ce container_name: portainer restart: always labels: - \"traefik.enable=true\" - \"traefik.http.routers.portainer.rule=Host(`portainer.example.com`)\" - \"traefik.http.routers.portainer.entrypoints=websecure\" - \"traefik.http.routers.portainer.tls.certresolver=letsencrypt\" - \"traefik.http.services.portainer.loadbalancer.server.port=9000\" volumes: - portainer_data:/data networks: - traefik volumes: portainer_data: networks: traefik: external: true ✅ This setup tells Traefik:\nOnly expose Portainer over HTTPS (via websecure) Use the letsencrypt resolver to get a valid SSL certificate 🔄 Step 3: Run Everything Start Traefik:\ncd docker/traefik docker compose up -d Start Portainer:\ncd ../portainer docker compose up -d 🎉 Traefik will request an SSL cert for portainer.example.com — automatically — and serve your app over HTTPS.\n🧪 Test It Out Make sure DNS for portainer.example.com points to your server (you can test with a custom domain or local DNS override like nip.io).\nThen go to:\n👉 https://portainer.example.com\n👉 http://localhost:8080 — Traefik dashboard\n✅ You should see a valid certificate issued by Let’s Encrypt.\n🛡 Pro Tips Use wildcard DNS services like *.nip.io, sslip.io, or local DNS for dev Don’t use localhost for HTTPS testing — Let’s Encrypt won’t issue certs for it Use docker compose logs -f traefik to debug cert issues Avoid exposing --api.insecure=true in production 🚀 What’s Next? You’ve now got a fully modular, secure, and scalable reverse proxy stack with:\n🔄 Automatic SSL 🧩 Service separation 🔐 Production-ready HTTPS ",
+  "wordCount" : "701",
+  "inLanguage": "en",
+  "image":"https://blog.innocloud.io/images/cover_traefik.png","datePublished": "2025-04-03T00:00:00Z",
+  "dateModified": "2025-04-03T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sammelaar"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InnoCloud.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.innocloud.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.innocloud.io/" accesskey="h" title="BiggBlog (Alt + H)">
+                <img src="https://blog.innocloud.io/innocloud-apple-touch-icon.png" alt="" aria-label="logo"
+                    height="35">BiggBlog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.innocloud.io/archives/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪
+    </h1>
+    <div class="post-meta"><span title='2025-04-03 00:00:00 +0000 UTC'>April 3, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Sammelaar
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="eager" src="https://blog.innocloud.io/images/cover_traefik.png" alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-what-youll-learn" aria-label="🧠 What You’ll Learn">🧠 What You’ll Learn</a></li>
+                <li>
+                    <a href="#-what-is-traefik" aria-label="🤔 What is Traefik?">🤔 What is Traefik?</a><ul>
+                        
+                <li>
+                    <a href="#in-plain-english" aria-label="In plain English:">In plain English:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-how-it-works" aria-label="💡 How It Works">💡 How It Works</a></li>
+                <li>
+                    <a href="#-folder-structure" aria-label="🧪 Folder Structure">🧪 Folder Structure</a></li>
+                <li>
+                    <a href="#-step-1-updated-traefik-config-with-https" aria-label="⚙️ Step 1: Updated Traefik Config with HTTPS">⚙️ Step 1: Updated Traefik Config with HTTPS</a><ul>
+                        
+                <li>
+                    <a href="#-traefikdocker-composeyml" aria-label="📄 traefik/docker-compose.yml">📄 traefik/docker-compose.yml</a></li>
+                <li>
+                    <a href="#-traefiktraefikyml" aria-label="🧾 traefik/traefik.yml">🧾 traefik/traefik.yml</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-step-2-secure-portainer-with-https" aria-label="🛠 Step 2: Secure Portainer with HTTPS">🛠 Step 2: Secure Portainer with HTTPS</a><ul>
+                        
+                <li>
+                    <a href="#-portainerdocker-composeyml" aria-label="📄 portainer/docker-compose.yml">📄 portainer/docker-compose.yml</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-step-3-run-everything" aria-label="🔄 Step 3: Run Everything">🔄 Step 3: Run Everything</a></li>
+                <li>
+                    <a href="#-test-it-out" aria-label="🧪 Test It Out">🧪 Test It Out</a></li>
+                <li>
+                    <a href="#-pro-tips" aria-label="🛡 Pro Tips">🛡 Pro Tips</a></li>
+                <li>
+                    <a href="#-whats-next" aria-label="🚀 What’s Next?">🚀 What’s Next?</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><em>Secure all your Docker services with auto-magic HTTPS</em></p>
+<p>So you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:</p>
+<blockquote>
+<p>“Wait… I have 5 apps and they all want to use port 80 or 443 😅”</p>
+</blockquote>
+<p>Enter <strong>Traefik</strong> — the magical, self-configuring reverse proxy for Docker.<br>
+You define a few labels, let it read your Docker socket, and BOOM — instant routing, SSL, dashboards, load balancing… all in real-time. 🤯</p>
+<p>Let’s walk through how to install <strong>Traefik in Docker Compose</strong>, use it to route traffic to containers like Portainer — without ever touching <code>nginx.conf</code> and secure it by HTTPS with a certificate.</p>
+<p>Thanks to <strong>Let’s Encrypt</strong> and Traefik’s built-in TLS support, it’s easier than ever. Let’s upgrade your setup and make your apps production-worthy 🔒🚀</p>
+<hr>
+<h2 id="-what-youll-learn">🧠 What You’ll Learn<a hidden class="anchor" aria-hidden="true" href="#-what-youll-learn">#</a></h2>
+<ul>
+<li>What Traefik is and why it rocks 🤘</li>
+<li>How to install it using Docker Compose</li>
+<li>How to expose services like Portainer through Traefik</li>
+<li>A simple example using Docker labels</li>
+<li>How to enable HTTPS in Traefik with Let’s Encrypt</li>
+<li>How to use <code>docker-compose</code> with separate files for Traefik and Portainer</li>
+<li>How to set up secure routing with TLS and valid SSL certs</li>
+<li>How to test it locally with a self-signed wildcard domain</li>
+</ul>
+<hr>
+<h2 id="-what-is-traefik">🤔 What is Traefik?<a hidden class="anchor" aria-hidden="true" href="#-what-is-traefik">#</a></h2>
+<p>Traefik is a modern reverse proxy and load balancer built specifically for microservices and container setups. It <strong>monitors your Docker environment</strong>, watches for labels on containers, and automatically routes traffic to them based on rules you define.</p>
+<h3 id="in-plain-english">In plain English:<a hidden class="anchor" aria-hidden="true" href="#in-plain-english">#</a></h3>
+<ul>
+<li>You give your app a label like: <code>traefik.http.routers.myapp.rule=Host(</code>myapp.local<code>)</code></li>
+<li>Traefik goes: “Got it! Routing traffic for myapp.local to this container!”</li>
+<li>You didn’t write any config files. It just works. 😍</li>
+</ul>
+<h2 id="-how-it-works">💡 How It Works<a hidden class="anchor" aria-hidden="true" href="#-how-it-works">#</a></h2>
+<ul>
+<li>Traefik reads labels from your containers via the Docker socket</li>
+<li>It creates a router based on <code>Host()</code> rules</li>
+<li>The entrypoint <code>web</code> listens on port 80</li>
+<li>The dashboard is enabled at <code>localhost:8080</code></li>
+<li>Only services with <code>traefik.enable=true</code> are exposed 🔒</li>
+</ul>
+<h2 id="-folder-structure">🧪 Folder Structure<a hidden class="anchor" aria-hidden="true" href="#-folder-structure">#</a></h2>
+<p>Same clean layout:</p>
+<pre tabindex="0"><code>docker/
+├── traefik/
+│   ├── docker-compose.yml
+│   ├── traefik.yml
+│   └── acme.json  (auto-generated cert storage)
+├── portainer/
+│   └── docker-compose.yml
+</code></pre><hr>
+<h2 id="-step-1-updated-traefik-config-with-https">⚙️ Step 1: Updated Traefik Config with HTTPS<a hidden class="anchor" aria-hidden="true" href="#-step-1-updated-traefik-config-with-https">#</a></h2>
+<h3 id="-traefikdocker-composeyml">📄 <code>traefik/docker-compose.yml</code><a hidden class="anchor" aria-hidden="true" href="#-traefikdocker-composeyml">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.8&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">traefik</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">traefik:v2.10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">traefik</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;--providers.file.filename=/etc/traefik/traefik.yml&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;80:80&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;443:443&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8080:8080&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./traefik.yml:/etc/traefik/traefik.yml:ro</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./acme.json:/acme.json</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/var/run/docker.sock:/var/run/docker.sock:ro</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">traefik</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">traefik</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">traefik</span>
+</span></span></code></pre></div><p>⚠️ <strong>Important:</strong><br>
+Before starting Traefik, create the <code>acme.json</code> file and lock down the permissions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch acme.json
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> acme.json
+</span></span></code></pre></div><hr>
+<h3 id="-traefiktraefikyml">🧾 <code>traefik/traefik.yml</code><a hidden class="anchor" aria-hidden="true" href="#-traefiktraefikyml">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">entryPoints</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">address</span>: <span style="color:#e6db74">&#34;:80&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">websecure</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">address</span>: <span style="color:#e6db74">&#34;:443&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">providers</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">docker</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">exposedByDefault</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">file</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">filename</span>: <span style="color:#ae81ff">/etc/traefik/traefik.yml</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">certificatesResolvers</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">letsencrypt</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">acme</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">email</span>: <span style="color:#ae81ff">your-email@example.com</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">/acme.json</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">httpChallenge</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">entryPoint</span>: <span style="color:#ae81ff">web</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">api</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">dashboard</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">insecure</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Remove in production!</span>
+</span></span></code></pre></div><p>🔐 This config:</p>
+<ul>
+<li>Sets up two entry points: HTTP (<code>web</code>) and HTTPS (<code>websecure</code>)</li>
+<li>Enables the Let’s Encrypt resolver called <code>letsencrypt</code></li>
+<li>Uses the HTTP challenge (port 80) for cert verification</li>
+</ul>
+<hr>
+<h2 id="-step-2-secure-portainer-with-https">🛠 Step 2: Secure Portainer with HTTPS<a hidden class="anchor" aria-hidden="true" href="#-step-2-secure-portainer-with-https">#</a></h2>
+<h3 id="-portainerdocker-composeyml">📄 <code>portainer/docker-compose.yml</code><a hidden class="anchor" aria-hidden="true" href="#-portainerdocker-composeyml">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.8&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">portainer</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">portainer/portainer-ce</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">portainer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;traefik.enable=true&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;traefik.http.routers.portainer.rule=Host(`portainer.example.com`)&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;traefik.http.routers.portainer.entrypoints=websecure&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;traefik.http.routers.portainer.tls.certresolver=letsencrypt&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;traefik.http.services.portainer.loadbalancer.server.port=9000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">portainer_data:/data</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">traefik</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">portainer_data</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">traefik</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">external</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>✅ This setup tells Traefik:</p>
+<ul>
+<li>Only expose Portainer over HTTPS (via <code>websecure</code>)</li>
+<li>Use the <code>letsencrypt</code> resolver to get a valid SSL certificate</li>
+</ul>
+<hr>
+<h2 id="-step-3-run-everything">🔄 Step 3: Run Everything<a hidden class="anchor" aria-hidden="true" href="#-step-3-run-everything">#</a></h2>
+<p>Start Traefik:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd docker/traefik
+</span></span><span style="display:flex;"><span>docker compose up -d
+</span></span></code></pre></div><p>Start Portainer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ../portainer
+</span></span><span style="display:flex;"><span>docker compose up -d
+</span></span></code></pre></div><p>🎉 Traefik will request an SSL cert for <code>portainer.example.com</code> — <strong>automatically</strong> — and serve your app over HTTPS.</p>
+<hr>
+<h2 id="-test-it-out">🧪 Test It Out<a hidden class="anchor" aria-hidden="true" href="#-test-it-out">#</a></h2>
+<p>Make sure DNS for <code>portainer.example.com</code> points to your server (you can test with a custom domain or local DNS override like <a href="https://nip.io">nip.io</a>).</p>
+<p>Then go to:</p>
+<p>👉 <a href="https://portainer.example.com">https://portainer.example.com</a><br>
+👉 <a href="http://localhost:8080">http://localhost:8080</a> — Traefik dashboard</p>
+<p>✅ You should see a valid certificate issued by Let’s Encrypt.</p>
+<hr>
+<h2 id="-pro-tips">🛡 Pro Tips<a hidden class="anchor" aria-hidden="true" href="#-pro-tips">#</a></h2>
+<ul>
+<li>Use wildcard DNS services like <code>*.nip.io</code>, <code>sslip.io</code>, or local DNS for dev</li>
+<li>Don’t use <code>localhost</code> for HTTPS testing — Let’s Encrypt won’t issue certs for it</li>
+<li>Use <code>docker compose logs -f traefik</code> to debug cert issues</li>
+<li>Avoid exposing <code>--api.insecure=true</code> in production</li>
+</ul>
+<hr>
+<h2 id="-whats-next">🚀 What’s Next?<a hidden class="anchor" aria-hidden="true" href="#-whats-next">#</a></h2>
+<p>You’ve now got a <strong>fully modular</strong>, <strong>secure</strong>, and <strong>scalable</strong> reverse proxy stack with:</p>
+<ul>
+<li>🔄 Automatic SSL</li>
+<li>🧩 Service separation</li>
+<li>🔐 Production-ready HTTPS</li>
+</ul>
+<hr>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.innocloud.io/tags/tech/">Tech</a></li>
+      <li><a href="https://blog.innocloud.io/tags/docker/">Docker</a></li>
+      <li><a href="https://blog.innocloud.io/tags/github/">Github</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://blog.innocloud.io/">InnoCloud.io</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
