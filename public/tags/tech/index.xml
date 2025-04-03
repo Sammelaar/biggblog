@@ -10,9 +10,9 @@
     <atom:link href="https://blog.innocloud.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Traefik with Docker Compose – The Secure Dev-Friendly Reverse Proxy 🛡️🔐🚪</title>
-      <link>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/</link>
+      <link>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy/</link>
       <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy-%EF%B8%8F/</guid>
+      <guid>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy/</guid>
       <description>&lt;p&gt;&lt;em&gt;Secure all your Docker services with auto-magic HTTPS&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;So you’ve been playing with Docker and Docker Compose. You’ve spun up Portainer, maybe a Flask app, maybe even a database. Everything works great — until you realize:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -23,9 +23,9 @@ You define a few labels, let it read your Docker socket, and BOOM — instant ro
     </item>
     <item>
       <title>Intro to Docker Compose – Managing Multi-Container Apps Like a Boss 🧩🐳</title>
-      <link>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss-/</link>
+      <link>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss/</link>
       <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss-/</guid>
+      <guid>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss/</guid>
       <description>&lt;p&gt;&lt;em&gt;No more &lt;code&gt;docker run&lt;/code&gt; madness — time to go pro&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Alright, so you’ve built your first Docker container. Maybe two.&lt;br&gt;
 Then you added a database. And maybe a web UI to manage them.&lt;br&gt;
@@ -35,9 +35,9 @@ Compose is your way to manage multi-container apps like a BOSS — with one clea
     </item>
     <item>
       <title>Getting Started with Docker – Install &amp; Run Your First Container 🐳⚡</title>
-      <link>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container-/</link>
+      <link>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container-/</guid>
+      <guid>https://blog.innocloud.io/posts/getting-started-with-docker--install--run-your-first-container/</guid>
       <description>&lt;p&gt;So you’ve heard about Docker. Maybe you read my last post and now you’re pumped to try it out (if not, check out &lt;a href=&#34;https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/&#34;&gt;What is Docker?&lt;/a&gt; — it’s a good one 👀).&lt;br&gt;
 Today, we’re not just talking about Docker — we’re gonna &lt;strong&gt;use it&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;By the end of this post, you’ll have Docker installed, your first container running, and the confidence to start experimenting like a pro.&lt;/p&gt;
@@ -56,18 +56,18 @@ Today, we’re not just talking about Docker — we’re gonna &lt;strong&gt;use
     </item>
     <item>
       <title>What is Docker and why should you use it? 🐳</title>
-      <link>https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/</link>
+      <link>https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it-/</guid>
+      <guid>https://blog.innocloud.io/posts/what-is-docker-and-why-should-you-use-it/</guid>
       <description>&lt;p&gt;Let’s talk about Docker. Because if you’re into development, DevOps, cloud, automation, or just love clean, efficient systems — this tool will absolutely &lt;strong&gt;blow your mind&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;I still remember the first time I used Docker. I packaged my app into a container, ran it, and it &lt;em&gt;just worked&lt;/em&gt;. No dependency hell, no “but it works on my machine” drama. That moment? Life-changing.&lt;/p&gt;
 &lt;p&gt;So if you’re new to Docker or just Docker-curious — buckle up. I’m gonna break it down, hype it up, and show you why I’m obsessed with it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>This is my first blog! 🔥🚀</title>
-      <link>https://blog.innocloud.io/posts/this-is-my-first-blog-/</link>
+      <link>https://blog.innocloud.io/posts/this-is-my-first-blog/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/posts/this-is-my-first-blog-/</guid>
+      <guid>https://blog.innocloud.io/posts/this-is-my-first-blog/</guid>
       <description>&lt;p&gt;Last November, NetworkChuck dropped an &lt;a href=&#34;https://youtu.be/dnE7c0ELEH8?si=0KOi9RjaDTtLycFK&#34;&gt;inspiring video&lt;/a&gt; that got my gears turning. &amp;#x1f4a1; Fast forward to 2025, and I’ve set myself an epic challenge: every month this year, I’m diving into something new in the world of IT.&lt;/p&gt;
 &lt;p&gt;For January, I’m kicking things off by following Chuck’s video step by step, and I can’t wait to share what I learn. Stay tuned, because each month, a fresh blog post will drop with my latest tech adventures. Let’s make 2025 a year of leveling up together! &amp;#x1f680; &amp;#x1f468;&amp;zwj;&amp;#x1f393;&lt;/p&gt;</description>
     </item>
