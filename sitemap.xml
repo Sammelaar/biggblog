@@ -3,24 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.innocloud.io/tags/docker/</loc>
-    <lastmod>2025-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/github/</loc>
-    <lastmod>2025-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/hostinger/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/</loc>
-    <lastmod>2025-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy/</loc>
-    <lastmod>2025-04-02T00:00:00+00:00</lastmod>
+    <loc>https://blog.innocloud.io/tags/pangolin/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/posts/</loc>
-    <lastmod>2025-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/reverse-proxy/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/</loc>
-    <lastmod>2025-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/tech/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/vps/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/wireguard/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/posts/install-traefik-with-docker-compose--the-secure-dev-friendly-reverse-proxy/</loc>
     <lastmod>2025-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/posts/intro-to-docker-compose--managing-multi-container-apps-like-a-boss/</loc>

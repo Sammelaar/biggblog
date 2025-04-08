@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀 | InnoCloud.io</title>
+<meta name="keywords" content="tech, pangolin, vps, hostinger, reverse proxy, wireguard, docker, github">
+<meta name="description" content="One domain, one VPS, total control.
+I recently decided to set up a rock-solid reverse proxy solution on my VPS, and after testing a few options, I found something awesome — Pangolin 🦔. It’s simple, powerful, and feels like it was built for people like us who love control without endless config files.
+In this post, I’ll walk you through exactly how I installed and configured Pangolin on my VPS (hosted via Hostinger), got Docker containers behind it, used Gerbil for VPN, secured it with CrowdSec, and even added a remote Newt agent to route traffic from my homelab. Let&rsquo;s goooo 💻🔧🌍">
+<meta name="author" content="Sammelaar">
+<link rel="canonical" href="https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.innocloud.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.innocloud.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.innocloud.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.innocloud.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.innocloud.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/">
+  <meta property="og:site_name" content="InnoCloud.io">
+  <meta property="og:title" content="Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀">
+  <meta property="og:description" content="One domain, one VPS, total control.
+I recently decided to set up a rock-solid reverse proxy solution on my VPS, and after testing a few options, I found something awesome — Pangolin 🦔. It’s simple, powerful, and feels like it was built for people like us who love control without endless config files.
+In this post, I’ll walk you through exactly how I installed and configured Pangolin on my VPS (hosted via Hostinger), got Docker containers behind it, used Gerbil for VPN, secured it with CrowdSec, and even added a remote Newt agent to route traffic from my homelab. Let’s goooo 💻🔧🌍">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-08T00:00:00+00:00">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="Pangolin">
+    <meta property="article:tag" content="Vps">
+    <meta property="article:tag" content="Hostinger">
+    <meta property="article:tag" content="Reverse Proxy">
+    <meta property="article:tag" content="Wireguard">
+    <meta property="og:image" content="https://blog.innocloud.io/images/cover_pangolin.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.innocloud.io/images/cover_pangolin.png">
+<meta name="twitter:title" content="Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀">
+<meta name="twitter:description" content="One domain, one VPS, total control.
+I recently decided to set up a rock-solid reverse proxy solution on my VPS, and after testing a few options, I found something awesome — Pangolin 🦔. It’s simple, powerful, and feels like it was built for people like us who love control without endless config files.
+In this post, I’ll walk you through exactly how I installed and configured Pangolin on my VPS (hosted via Hostinger), got Docker containers behind it, used Gerbil for VPN, secured it with CrowdSec, and even added a remote Newt agent to route traffic from my homelab. Let&rsquo;s goooo 💻🔧🌍">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.innocloud.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀",
+      "item": "https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀",
+  "name": "Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀",
+  "description": "One domain, one VPS, total control.\nI recently decided to set up a rock-solid reverse proxy solution on my VPS, and after testing a few options, I found something awesome — Pangolin 🦔. It’s simple, powerful, and feels like it was built for people like us who love control without endless config files.\nIn this post, I’ll walk you through exactly how I installed and configured Pangolin on my VPS (hosted via Hostinger), got Docker containers behind it, used Gerbil for VPN, secured it with CrowdSec, and even added a remote Newt agent to route traffic from my homelab. Let\u0026rsquo;s goooo 💻🔧🌍\n",
+  "keywords": [
+    "tech", "pangolin", "vps", "hostinger", "reverse proxy", "wireguard", "docker", "github"
+  ],
+  "articleBody": "One domain, one VPS, total control.\nI recently decided to set up a rock-solid reverse proxy solution on my VPS, and after testing a few options, I found something awesome — Pangolin 🦔. It’s simple, powerful, and feels like it was built for people like us who love control without endless config files.\nIn this post, I’ll walk you through exactly how I installed and configured Pangolin on my VPS (hosted via Hostinger), got Docker containers behind it, used Gerbil for VPN, secured it with CrowdSec, and even added a remote Newt agent to route traffic from my homelab. Let’s goooo 💻🔧🌍\n🧠 What You’ll Learn How to install Pangolin with VPN + Docker How to tunnel remote traffic with Newt How to set up secure HTTPS with Let’s Encrypt How to fine-tune TLS settings for better security How to monitor access and trigger alerts for threats 🔧 Step 1: Set Up Your VPS I started by creating a new VPS through my Hostinger dashboard — super quick setup.\nOnce my VPS was running and I SSH’d in, I was ready to install Pangolin.\n🦔 Step 2: Install Pangolin This was smooth. Just grabbed the installer with wget and executed it:\nwget -O installer \"",
+  "wordCount" : "833",
+  "inLanguage": "en",
+  "image":"https://blog.innocloud.io/images/cover_pangolin.png","datePublished": "2025-04-08T00:00:00Z",
+  "dateModified": "2025-04-08T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sammelaar"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InnoCloud.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.innocloud.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.innocloud.io/" accesskey="h" title="BiggBlog (Alt + H)">
+                <img src="https://blog.innocloud.io/innocloud-apple-touch-icon.png" alt="" aria-label="logo"
+                    height="35">BiggBlog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.innocloud.io/archives/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀
+    </h1>
+    <div class="post-meta"><span title='2025-04-08 00:00:00 +0000 UTC'>April 8, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Sammelaar
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="eager" src="https://blog.innocloud.io/images/cover_pangolin.png" alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-what-youll-learn" aria-label="🧠 What You&rsquo;ll Learn">🧠 What You&rsquo;ll Learn</a></li>
+                <li>
+                    <a href="#-step-1-set-up-your-vps" aria-label="🔧 Step 1: Set Up Your VPS">🔧 Step 1: Set Up Your VPS</a></li>
+                <li>
+                    <a href="#-step-2-install-pangolin" aria-label="🦔 Step 2: Install Pangolin">🦔 Step 2: Install Pangolin</a></li>
+                <li>
+                    <a href="#-step-3-install-docker--set-up-containers" aria-label="🐳 Step 3: Install Docker &#43; Set Up Containers">🐳 Step 3: Install Docker + Set Up Containers</a></li>
+                <li>
+                    <a href="#-step-4-harden-with-crowdsec" aria-label="🛡 Step 4: Harden with CrowdSec">🛡 Step 4: Harden with CrowdSec</a></li>
+                <li>
+                    <a href="#-step-5-create-a-site-for-my-homelab" aria-label="🏠 Step 5: Create a Site for My Homelab">🏠 Step 5: Create a Site for My Homelab</a></li>
+                <li>
+                    <a href="#-step-6-newt-config--secure-traffic-from-my-homelab" aria-label="🌐 Step 6: Newt Config – Secure Traffic from My Homelab">🌐 Step 6: Newt Config – Secure Traffic from My Homelab</a><ul>
+                        
+                <li>
+                    <a href="#-docker-composeyml-on-the-lxc" aria-label="🧾 docker-compose.yml (on the LXC)">🧾 docker-compose.yml (on the LXC)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-step-7-lxc-container-setup-in-proxmox" aria-label="🧱 Step 7: LXC Container Setup in Proxmox">🧱 Step 7: LXC Container Setup in Proxmox</a></li>
+                <li>
+                    <a href="#-step-8-lets-encrypt--custom-tls-settings" aria-label="🔐 Step 8: Let’s Encrypt &#43; Custom TLS Settings">🔐 Step 8: Let’s Encrypt + Custom TLS Settings</a><ul>
+                        
+                <li>
+                    <a href="#-my-tls-setup" aria-label="✅ My TLS setup:">✅ My TLS setup:</a></li>
+                <li>
+                    <a href="#you-can-tweak-these-under" aria-label="📍You can tweak these under:">📍You can tweak these under:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-step-9-monitoring--alerts" aria-label="🚨 Step 9: Monitoring &amp; Alerts">🚨 Step 9: Monitoring &amp; Alerts</a><ul>
+                        
+                <li>
+                    <a href="#-logs--access" aria-label="🔍 Logs &amp; Access:">🔍 Logs &amp; Access:</a></li>
+                <li>
+                    <a href="#-external-monitoring" aria-label="📡 External Monitoring:">📡 External Monitoring:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-final-stack-recap" aria-label="✅ Final Stack Recap">✅ Final Stack Recap</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><em>One domain, one VPS, total control.</em></p>
+<p>I recently decided to set up a rock-solid reverse proxy solution on my VPS, and after testing a few options, I found something <em>awesome</em> — <strong>Pangolin</strong> 🦔. It’s simple, powerful, and feels like it was built for people like us who love control without endless config files.</p>
+<p>In this post, I’ll walk you through <strong>exactly</strong> how I installed and configured Pangolin on my VPS (hosted via Hostinger), got Docker containers behind it, used <strong>Gerbil</strong> for VPN, secured it with <strong>CrowdSec</strong>, and even added a remote <strong>Newt</strong> agent to route traffic from my homelab. Let&rsquo;s goooo 💻🔧🌍</p>
+<hr>
+<h2 id="-what-youll-learn">🧠 What You&rsquo;ll Learn<a hidden class="anchor" aria-hidden="true" href="#-what-youll-learn">#</a></h2>
+<ul>
+<li>How to install Pangolin with VPN + Docker</li>
+<li>How to tunnel remote traffic with Newt</li>
+<li>How to set up secure HTTPS with <strong>Let’s Encrypt</strong></li>
+<li>How to fine-tune <strong>TLS settings</strong> for better security</li>
+<li>How to monitor access and trigger alerts for threats</li>
+</ul>
+<hr>
+<h2 id="-step-1-set-up-your-vps">🔧 Step 1: Set Up Your VPS<a hidden class="anchor" aria-hidden="true" href="#-step-1-set-up-your-vps">#</a></h2>
+<p>I started by creating a new VPS through my <strong>Hostinger</strong> dashboard — super quick setup.</p>
+<p>Once my VPS was running and I SSH’d in, I was ready to install Pangolin.</p>
+<hr>
+<h2 id="-step-2-install-pangolin">🦔 Step 2: Install Pangolin<a hidden class="anchor" aria-hidden="true" href="#-step-2-install-pangolin">#</a></h2>
+<p>This was smooth. Just grabbed the installer with <code>wget</code> and executed it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -O installer <span style="color:#e6db74">&#34;&lt;https://github.com/fosrl/pangolin/releases/download/1.1.0/installer_linux_</span><span style="color:#66d9ef">$(</span>uname -m | sed <span style="color:#e6db74">&#39;s/x86_64/amd64/;s/aarch64/arm64/&#39;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>chmod +x ./installer
+</span></span><span style="display:flex;"><span>sudo ./installer
+</span></span></code></pre></div><p>During the install:</p>
+<ul>
+<li>Entered my <strong>domain name + email</strong></li>
+<li>Chose <strong>Gerbil</strong> 🐹 for the VPN engine</li>
+<li>Created admin credentials</li>
+<li>Accepted default settings for email/invites</li>
+</ul>
+<p>Pangolin was now live at:</p>
+<p>👉 <code>https://pangolin.my-domain.com</code> ✅</p>
+<hr>
+<h2 id="-step-3-install-docker--set-up-containers">🐳 Step 3: Install Docker + Set Up Containers<a hidden class="anchor" aria-hidden="true" href="#-step-3-install-docker--set-up-containers">#</a></h2>
+<p>With Pangolin installed, I needed Docker for my container services.</p>
+<p>Here’s the full install script I used:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt install -y ca-certificates curl gnupg lsb-release
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mkdir -p /etc/apt/keyrings
+</span></span><span style="display:flex;"><span>curl -fsSL https://download.docker.com/linux/<span style="color:#66d9ef">$(</span>. /etc/os-release <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span>$ID<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#34;deb [arch=</span><span style="color:#66d9ef">$(</span>dpkg --print-architecture<span style="color:#66d9ef">)</span><span style="color:#e6db74"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/</span><span style="color:#66d9ef">$(</span>. /etc/os-release <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span>$ID<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74"> \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span> | tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</span></span></code></pre></div><p>Boom — Docker and Docker Compose installed. ✅</p>
+<hr>
+<h2 id="-step-4-harden-with-crowdsec">🛡 Step 4: Harden with CrowdSec<a hidden class="anchor" aria-hidden="true" href="#-step-4-harden-with-crowdsec">#</a></h2>
+<p>To secure the reverse proxy from brute-force bots and other nonsense, I installed <strong>CrowdSec</strong>. It works seamlessly with Pangolin and adds a smart firewall layer based on community-powered threat intel.</p>
+<p>Plus, it supports bouncers like <code>crowdsec-firewall-bouncer</code>, <code>Traefik-bouncer</code>, or even Slack/Telegram for alerts 📲</p>
+<p>Installation is fast, and Pangolin supports it out of the box — just follow the <a href="https://docs.fosrl.io">CrowdSec + Pangolin guide</a>.</p>
+<hr>
+<h2 id="-step-5-create-a-site-for-my-homelab">🏠 Step 5: Create a Site for My Homelab<a hidden class="anchor" aria-hidden="true" href="#-step-5-create-a-site-for-my-homelab">#</a></h2>
+<p>Inside the Pangolin dashboard (now live at <code>https://pangolin.my-domain.com</code>), I created a new site called <strong>Homelab</strong> — this is where I forward all my remote services like:</p>
+<ul>
+<li>Proxmox</li>
+<li>Portainer</li>
+<li>Home Assistant</li>
+<li>Anything with a web UI</li>
+</ul>
+<hr>
+<h2 id="-step-6-newt-config--secure-traffic-from-my-homelab">🌐 Step 6: Newt Config – Secure Traffic from My Homelab<a hidden class="anchor" aria-hidden="true" href="#-step-6-newt-config--secure-traffic-from-my-homelab">#</a></h2>
+<p>I used <strong>Newt</strong>, Pangolin’s remote connector, to tunnel traffic from my Proxmox LXC container through to Pangolin on the VPS.</p>
+<h3 id="-docker-composeyml-on-the-lxc">🧾 <code>docker-compose.yml</code> (on the LXC)<a hidden class="anchor" aria-hidden="true" href="#-docker-composeyml-on-the-lxc">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">newt</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">fosrl/newt</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">newt</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PANGOLIN_ENDPOINT=https://pangolin.hostname.com</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">NEWT_ID=your_newt_id</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">NEWT_SECRET=your_newt_secret</span>
+</span></span></code></pre></div><p>You get the <code>NEWT_ID</code> and <code>NEWT_SECRET</code> from the Pangolin dashboard when you add a new connector under “Endpoints”.</p>
+<hr>
+<h2 id="-step-7-lxc-container-setup-in-proxmox">🧱 Step 7: LXC Container Setup in Proxmox<a hidden class="anchor" aria-hidden="true" href="#-step-7-lxc-container-setup-in-proxmox">#</a></h2>
+<p>Newt needs Docker inside the container, so I updated the LXC config like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Required for Docker</span>
+</span></span><span style="display:flex;"><span>features: keyctl<span style="color:#f92672">=</span>1,nesting<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Optional but helpful</span>
+</span></span><span style="display:flex;"><span>lxc.apparmor.profile: unconfined
+</span></span><span style="display:flex;"><span>lxc.cgroup.devices.allow: a
+</span></span><span style="display:flex;"><span>lxc.cap.drop:
+</span></span></code></pre></div><p>Then restarted the container and installed Docker using the same script from earlier.</p>
+<hr>
+<h2 id="-step-8-lets-encrypt--custom-tls-settings">🔐 Step 8: Let’s Encrypt + Custom TLS Settings<a hidden class="anchor" aria-hidden="true" href="#-step-8-lets-encrypt--custom-tls-settings">#</a></h2>
+<p>Out of the box, Pangolin handles <strong>Let’s Encrypt SSL</strong> — which is amazing. But I like having control, so I tweaked some TLS settings.</p>
+<h3 id="-my-tls-setup">✅ My TLS setup:<a hidden class="anchor" aria-hidden="true" href="#-my-tls-setup">#</a></h3>
+<ul>
+<li>TLS 1.2 and 1.3 only</li>
+<li>Removed insecure ciphers</li>
+<li>HSTS and OCSP enabled</li>
+<li>Auto-renew enabled</li>
+</ul>
+<h3 id="you-can-tweak-these-under">📍You can tweak these under:<a hidden class="anchor" aria-hidden="true" href="#you-can-tweak-these-under">#</a></h3>
+<p><code>/etc/pangolin/conf/pangolin.yaml</code> → TLS section:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">`tls:   minVersion: VersionTLS12   preferServerCipherSuites: true   cipherSuites:     - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384     - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305   hsts: true   ocspStapling</span>: <span style="color:#66d9ef">true</span><span style="color:#ae81ff">`</span>
+</span></span></code></pre></div><p>Don’t forget to restart Pangolin after changes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>sudo systemctl restart pangolin<span style="color:#e6db74">`</span>
+</span></span></code></pre></div><p>Now my entire Pangolin instance and every site routed through it is 100% HTTPS with hardened TLS 🔐✅</p>
+<hr>
+<h2 id="-step-9-monitoring--alerts">🚨 Step 9: Monitoring &amp; Alerts<a hidden class="anchor" aria-hidden="true" href="#-step-9-monitoring--alerts">#</a></h2>
+<p>Monitoring self-hosted apps is a must. Here’s what I set up:</p>
+<h3 id="-logs--access">🔍 Logs &amp; Access:<a hidden class="anchor" aria-hidden="true" href="#-logs--access">#</a></h3>
+<ul>
+<li>Use Pangolin’s built-in dashboard for request logs</li>
+<li>Integrate <strong>CrowdSec</strong> for attack detection + banning</li>
+<li>Enable JSON logging to export to Grafana/Loki if you want full observability</li>
+</ul>
+<h3 id="-external-monitoring">📡 External Monitoring:<a hidden class="anchor" aria-hidden="true" href="#-external-monitoring">#</a></h3>
+<ul>
+<li><a href="https://www.netbird.io/">NetBird</a> – Mesh VPN for remote access + identity-based security</li>
+<li><a href="https://github.com/louislam/uptime-kuma">Uptime Kuma</a> – Self-hosted status page</li>
+<li>Telegram bot or Gotify for push alerts</li>
+</ul>
+<p>You can even have CrowdSec notify you via Slack or Discord when it bans an IP — amazing visibility into your traffic 🔥</p>
+<hr>
+<h2 id="-final-stack-recap">✅ Final Stack Recap<a hidden class="anchor" aria-hidden="true" href="#-final-stack-recap">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Pangolin</strong> 🦔</td>
+          <td>Reverse proxy with VPN support</td>
+      </tr>
+      <tr>
+          <td><strong>Docker</strong> 🐳</td>
+          <td>Container orchestration</td>
+      </tr>
+      <tr>
+          <td><strong>Gerbil</strong> 🐹</td>
+          <td>VPN engine for tunnels</td>
+      </tr>
+      <tr>
+          <td><strong>CrowdSec</strong> 🛡</td>
+          <td>Security + threat mitigation</td>
+      </tr>
+      <tr>
+          <td><strong>Newt</strong> 🐍</td>
+          <td>Secure tunnel from homelab</td>
+      </tr>
+      <tr>
+          <td><strong>Let’s Encrypt</strong> 🔐</td>
+          <td>Auto TLS + certs</td>
+      </tr>
+      <tr>
+          <td><strong>Uptime Kuma / NetBird</strong> 🔍</td>
+          <td>Monitoring &amp; alerts</td>
+      </tr>
+  </tbody>
+</table>
+<p>The result? A clean, secure, auto-updating reverse proxy that connects my remote containers and self-hosted services like a dream.</p>
+<hr>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.innocloud.io/tags/tech/">Tech</a></li>
+      <li><a href="https://blog.innocloud.io/tags/pangolin/">Pangolin</a></li>
+      <li><a href="https://blog.innocloud.io/tags/vps/">Vps</a></li>
+      <li><a href="https://blog.innocloud.io/tags/hostinger/">Hostinger</a></li>
+      <li><a href="https://blog.innocloud.io/tags/reverse-proxy/">Reverse Proxy</a></li>
+      <li><a href="https://blog.innocloud.io/tags/wireguard/">Wireguard</a></li>
+      <li><a href="https://blog.innocloud.io/tags/docker/">Docker</a></li>
+      <li><a href="https://blog.innocloud.io/tags/github/">Github</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://blog.innocloud.io/">InnoCloud.io</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

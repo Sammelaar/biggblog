@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pangolin on InnoCloud.io</title>
+    <link>https://blog.innocloud.io/tags/pangolin/</link>
+    <description>Recent content in Pangolin on InnoCloud.io</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.innocloud.io/tags/pangolin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀</title>
+      <link>https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/</guid>
+      <description>&lt;p&gt;&lt;em&gt;One domain, one VPS, total control.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I recently decided to set up a rock-solid reverse proxy solution on my VPS, and after testing a few options, I found something &lt;em&gt;awesome&lt;/em&gt; — &lt;strong&gt;Pangolin&lt;/strong&gt; 🦔. It’s simple, powerful, and feels like it was built for people like us who love control without endless config files.&lt;/p&gt;
+&lt;p&gt;In this post, I’ll walk you through &lt;strong&gt;exactly&lt;/strong&gt; how I installed and configured Pangolin on my VPS (hosted via Hostinger), got Docker containers behind it, used &lt;strong&gt;Gerbil&lt;/strong&gt; for VPN, secured it with &lt;strong&gt;CrowdSec&lt;/strong&gt;, and even added a remote &lt;strong&gt;Newt&lt;/strong&gt; agent to route traffic from my homelab. Let&amp;rsquo;s goooo 💻🔧🌍&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
