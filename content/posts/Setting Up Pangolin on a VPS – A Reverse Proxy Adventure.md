@@ -103,7 +103,7 @@ To secure the reverse proxy from brute-force bots and other nonsense, I installe
 
 Plus, it supports bouncers like `crowdsec-firewall-bouncer`, `Traefik-bouncer`, or even Slack/Telegram for alerts 📲
 
-Installation is fast, and Pangolin supports it out of the box — just follow the [CrowdSec + Pangolin guide](https://docs.fosrl.io).
+Installation is fast, and Pangolin supports it out of the box — just follow the [CrowdSec + Pangolin guide](https://docs.fossorial.io/Pangolin/overview#modular-design).
 
 ---
 
