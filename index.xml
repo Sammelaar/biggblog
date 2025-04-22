@@ -6,8 +6,20 @@
     <description>Recent content on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting Your Own Matrix Server &#43; Element Chat 💬🧠</title>
+      <link>https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat-/</link>
+      <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat-/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Because you deserve private, encrypted, decentralized communication.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Ever wanted your own chat platform — one that’s &lt;strong&gt;secure&lt;/strong&gt;, &lt;strong&gt;open&lt;/strong&gt;, &lt;strong&gt;decentralized&lt;/strong&gt;, and &lt;strong&gt;completely self-hosted&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Welcome to &lt;strong&gt;Matrix&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Matrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s &lt;strong&gt;Element&lt;/strong&gt; — a slick, modern chat client that makes using your server feel like Slack meets Signal.&lt;/p&gt;
+&lt;p&gt;In this guide, I’ll walk you through how to &lt;strong&gt;spin up your own Matrix homeserver (Synapse)&lt;/strong&gt; and host &lt;strong&gt;Element web&lt;/strong&gt; so you can start chatting from your domain, with your rules.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀</title>
       <link>https://blog.innocloud.io/posts/setting-up-pangolin-on-a-vps--a-reverse-proxy-adventure/</link>
