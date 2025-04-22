@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Hosting Your Own Matrix Server &#43; Element Chat 💬🧠 | InnoCloud.io</title>
+<meta name="keywords" content="tech, docker, github">
+<meta name="description" content="Because you deserve private, encrypted, decentralized communication.
+
+Ever wanted your own chat platform — one that’s secure, open, decentralized, and completely self-hosted?
+Welcome to Matrix.
+Matrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s Element — a slick, modern chat client that makes using your server feel like Slack meets Signal.
+In this guide, I’ll walk you through how to spin up your own Matrix homeserver (Synapse) and host Element web so you can start chatting from your domain, with your rules.">
+<meta name="author" content="Sammelaar">
+<link rel="canonical" href="https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.innocloud.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.innocloud.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.innocloud.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.innocloud.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.innocloud.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat/">
+  <meta property="og:site_name" content="InnoCloud.io">
+  <meta property="og:title" content="Hosting Your Own Matrix Server &#43; Element Chat 💬🧠">
+  <meta property="og:description" content="Because you deserve private, encrypted, decentralized communication.
+Ever wanted your own chat platform — one that’s secure, open, decentralized, and completely self-hosted?
+Welcome to Matrix.
+Matrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s Element — a slick, modern chat client that makes using your server feel like Slack meets Signal.
+In this guide, I’ll walk you through how to spin up your own Matrix homeserver (Synapse) and host Element web so you can start chatting from your domain, with your rules.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-22T00:00:00+00:00">
+    <meta property="article:tag" content="Tech">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Github">
+    <meta property="og:image" content="https://blog.innocloud.io/images/cover_matrix.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.innocloud.io/images/cover_matrix.png">
+<meta name="twitter:title" content="Hosting Your Own Matrix Server &#43; Element Chat 💬🧠">
+<meta name="twitter:description" content="Because you deserve private, encrypted, decentralized communication.
+
+Ever wanted your own chat platform — one that’s secure, open, decentralized, and completely self-hosted?
+Welcome to Matrix.
+Matrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s Element — a slick, modern chat client that makes using your server feel like Slack meets Signal.
+In this guide, I’ll walk you through how to spin up your own Matrix homeserver (Synapse) and host Element web so you can start chatting from your domain, with your rules.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.innocloud.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Hosting Your Own Matrix Server + Element Chat 💬🧠",
+      "item": "https://blog.innocloud.io/posts/hosting-your-own-matrix-server-+-element-chat/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hosting Your Own Matrix Server + Element Chat 💬🧠",
+  "name": "Hosting Your Own Matrix Server \u002b Element Chat 💬🧠",
+  "description": "Because you deserve private, encrypted, decentralized communication.\nEver wanted your own chat platform — one that’s secure, open, decentralized, and completely self-hosted?\nWelcome to Matrix.\nMatrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s Element — a slick, modern chat client that makes using your server feel like Slack meets Signal.\nIn this guide, I’ll walk you through how to spin up your own Matrix homeserver (Synapse) and host Element web so you can start chatting from your domain, with your rules.\n",
+  "keywords": [
+    "tech", "docker", "github"
+  ],
+  "articleBody": "Because you deserve private, encrypted, decentralized communication.\nEver wanted your own chat platform — one that’s secure, open, decentralized, and completely self-hosted?\nWelcome to Matrix.\nMatrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s Element — a slick, modern chat client that makes using your server feel like Slack meets Signal.\nIn this guide, I’ll walk you through how to spin up your own Matrix homeserver (Synapse) and host Element web so you can start chatting from your domain, with your rules.\n🧠 What You’ll Learn What Matrix and Element are (and why they’re awesome) How to deploy a Matrix Synapse server with Docker How to host Element web and point it to your homeserver How to secure it with a reverse proxy + HTTPS Tips for inviting users, mobile apps, and federation 🔍 What is Matrix? Matrix is a protocol — not just an app — for secure, decentralized messaging.\nFully open-source End-to-end encrypted Works across servers (federated like email) Supports voice, video, file sharing, bots, and bridges (IRC, Slack, Discord, Telegram…) Your Matrix identity might look like this:\n@you:yourdomain.com 🛠️ What is Element? Element is the main Matrix client — open source, beautiful, and super customizable. You can run it locally, in your browser, or host your own copy of the web app.\nTogether, Matrix + Element = Your own encrypted chat platform. 🧑‍💻\n🚀 Step-by-Step: Install Matrix Synapse Server We’ll install Synapse, the most popular Matrix server implementation.\n✅ Requirements: VPS or homelab machine (Ubuntu 22.04 or similar) Docker + Docker Compose A domain name (e.g., chat.yourdomain.com) A reverse proxy (we’ll use Traefik or Nginx) 📁 Folder Structure mkdir -p ~/matrix/synapse cd ~/matrix/synapse 🧾 Create .env file SERVER_NAME=yourdomain.com POSTGRES_PASSWORD=supersecurepassword 🐳 docker-compose.yml version: \"3.7\" services: synapse: image: matrixdotorg/synapse:latest container_name: synapse restart: unless-stopped environment: - SYNAPSE_SERVER_NAME=${SERVER_NAME} - SYNAPSE_REPORT_STATS=yes - SYNAPSE_CONFIG_PATH=/data/homeserver.yaml volumes: - ./data:/data depends_on: - postgres networks: - matrix postgres: image: postgres:13 restart: unless-stopped environment: POSTGRES_DB=synapse POSTGRES_USER=synapse POSTGRES_PASSWORD=${POSTGRES_PASSWORD} volumes: - ./postgres:/var/lib/postgresql/data networks: - matrix networks: matrix: driver: bridge 🔐 Step 2: Setup Reverse Proxy with HTTPS Option A: With Traefik (recommended) Just add labels to your synapse container, like:\nlabels: - \"traefik.enable=true\" - \"traefik.http.routers.matrix.rule=Host(`matrix.yourdomain.com`)\" - \"traefik.http.routers.matrix.entrypoints=websecure\" - \"traefik.http.routers.matrix.tls.certresolver=letsencrypt\" Option B: With Nginx Install Certbot and create a basic proxy config:\nserver { server_name matrix.yourdomain.com; location / { proxy_pass http://localhost:8008; proxy_set_header Host $host; proxy_set_header X-Forwarded-For $remote_addr; } listen 443 ssl; ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem; } ✅ Step 3: Run Synapse docker compose up -d Then initialize your first user:\ndocker exec -it synapse register_new_matrix_user -c /data/homeserver.yaml http://localhost:8008 You’ll be asked to enter a username, password, and optionally make this account an admin.\nCongrats! Your Matrix server is online 💬🧠\n🖼 Step 4: Deploy Element Web Create another folder: ~/matrix/element\ndocker-compose.yml for Element: version: \"3\" services: element: image: vectorim/element-web:latest container_name: element restart: unless-stopped volumes: - ./config.json:/app/config.json ports: - \"8080:80\" config.json { \"default_server_config\": { \"m.homeserver\": { \"base_url\": \"https://matrix.yourdomain.com\", \"server_name\": \"yourdomain.com\" } }, \"disable_custom_urls\": true, \"default_theme\": \"light\", \"brand\": \"MyMatrix\", \"features\": { \"feature_pinning\": true } } Then start it:\ndocker compose up -d Point your browser to https://element.yourdomain.com and log in with your Matrix username!\n📱 Bonus: Use on Mobile You can use your Matrix server with the Element app on iOS or Android!\nDownload Element Tap “Other server” Enter https://matrix.yourdomain.com Log in! 🔒 Optional: Enable Federation Want your Matrix server to talk to other Matrix servers (like matrix.org)? You’ll need to:\nMake sure port 8448 is open Add a server_name DNS SRV record (optional but helpful) Set up well-known file under /.well-known/matrix/server More info: Matrix Federation Guide\n🧠 Why Host Your Own Matrix Server? ✅ Fully encrypted messaging ✅ Federated: you control your domain and users ✅ Bridge with Slack, Discord, Telegram, etc. ✅ Beautiful UI via Element ✅ Open source, community driven That’s it! You now have your own chat server, powered by Matrix and Element — hosted under your domain, fully encrypted, and ready for friends, family, or your whole team.\n",
+  "wordCount" : "664",
+  "inLanguage": "en",
+  "image":"https://blog.innocloud.io/images/cover_matrix.png","datePublished": "2025-04-22T00:00:00Z",
+  "dateModified": "2025-04-22T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sammelaar"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.innocloud.io/posts/hosting-your-own-matrix-server-+-element-chat/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InnoCloud.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.innocloud.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.innocloud.io/" accesskey="h" title="BiggBlog (Alt + H)">
+                <img src="https://blog.innocloud.io/innocloud-apple-touch-icon.png" alt="" aria-label="logo"
+                    height="35">BiggBlog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.innocloud.io/archives/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Hosting Your Own Matrix Server &#43; Element Chat 💬🧠
+    </h1>
+    <div class="post-meta"><span title='2025-04-22 00:00:00 +0000 UTC'>April 22, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Sammelaar
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="eager" src="https://blog.innocloud.io/images/cover_matrix.png" alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-what-youll-learn" aria-label="🧠 What You&rsquo;ll Learn">🧠 What You&rsquo;ll Learn</a></li>
+                <li>
+                    <a href="#-what-is-matrix" aria-label="🔍 What is Matrix?">🔍 What is Matrix?</a></li>
+                <li>
+                    <a href="#-what-is-element" aria-label="🛠️ What is Element?">🛠️ What is Element?</a></li>
+                <li>
+                    <a href="#-step-by-step-install-matrix-synapse-server" aria-label="🚀 Step-by-Step: Install Matrix Synapse Server">🚀 Step-by-Step: Install Matrix Synapse Server</a><ul>
+                        
+                <li>
+                    <a href="#-requirements" aria-label="✅ Requirements:">✅ Requirements:</a></li>
+                <li>
+                    <a href="#-folder-structure" aria-label="📁 Folder Structure">📁 Folder Structure</a></li>
+                <li>
+                    <a href="#-create-env-file" aria-label="🧾 Create .env file">🧾 Create .env file</a></li>
+                <li>
+                    <a href="#-docker-composeyml" aria-label="🐳 docker-compose.yml">🐳 docker-compose.yml</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-step-2-setup-reverse-proxy-with-https" aria-label="🔐 Step 2: Setup Reverse Proxy with HTTPS">🔐 Step 2: Setup Reverse Proxy with HTTPS</a><ul>
+                        
+                <li>
+                    <a href="#option-a-with-traefik-recommended" aria-label="Option A: With Traefik (recommended)">Option A: With Traefik (recommended)</a></li>
+                <li>
+                    <a href="#option-b-with-nginx" aria-label="Option B: With Nginx">Option B: With Nginx</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-step-3-run-synapse" aria-label="✅ Step 3: Run Synapse">✅ Step 3: Run Synapse</a></li>
+                <li>
+                    <a href="#-step-4-deploy-element-web" aria-label="🖼 Step 4: Deploy Element Web">🖼 Step 4: Deploy Element Web</a><ul>
+                        
+                <li>
+                    <a href="#docker-composeyml-for-element" aria-label="docker-compose.yml for Element:">docker-compose.yml for Element:</a></li>
+                <li>
+                    <a href="#configjson" aria-label="config.json">config.json</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-bonus-use-on-mobile" aria-label="📱 Bonus: Use on Mobile">📱 Bonus: Use on Mobile</a></li>
+                <li>
+                    <a href="#-optional-enable-federation" aria-label="🔒 Optional: Enable Federation">🔒 Optional: Enable Federation</a></li>
+                <li>
+                    <a href="#-why-host-your-own-matrix-server" aria-label="🧠 Why Host Your Own Matrix Server?">🧠 Why Host Your Own Matrix Server?</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><em>Because you deserve private, encrypted, decentralized communication.</em></p>
+<hr>
+<p>Ever wanted your own chat platform — one that’s <strong>secure</strong>, <strong>open</strong>, <strong>decentralized</strong>, and <strong>completely self-hosted</strong>?</p>
+<p>Welcome to <strong>Matrix</strong>.</p>
+<p>Matrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s <strong>Element</strong> — a slick, modern chat client that makes using your server feel like Slack meets Signal.</p>
+<p>In this guide, I’ll walk you through how to <strong>spin up your own Matrix homeserver (Synapse)</strong> and host <strong>Element web</strong> so you can start chatting from your domain, with your rules.</p>
+<hr>
+<h2 id="-what-youll-learn">🧠 What You&rsquo;ll Learn<a hidden class="anchor" aria-hidden="true" href="#-what-youll-learn">#</a></h2>
+<ul>
+<li>What Matrix and Element are (and why they&rsquo;re awesome)</li>
+<li>How to deploy a Matrix Synapse server with Docker</li>
+<li>How to host Element web and point it to your homeserver</li>
+<li>How to secure it with a reverse proxy + HTTPS</li>
+<li>Tips for inviting users, mobile apps, and federation</li>
+</ul>
+<hr>
+<h2 id="-what-is-matrix">🔍 What is Matrix?<a hidden class="anchor" aria-hidden="true" href="#-what-is-matrix">#</a></h2>
+<p>Matrix is a protocol — not just an app — for secure, decentralized messaging.</p>
+<ul>
+<li>Fully open-source</li>
+<li>End-to-end encrypted</li>
+<li>Works across servers (federated like email)</li>
+<li>Supports voice, video, file sharing, bots, and bridges (IRC, Slack, Discord, Telegram…)</li>
+</ul>
+<p>Your Matrix identity might look like this:</p>
+<pre tabindex="0"><code>@you:yourdomain.com
+</code></pre><hr>
+<h2 id="-what-is-element">🛠️ What is Element?<a hidden class="anchor" aria-hidden="true" href="#-what-is-element">#</a></h2>
+<p><a href="https://element.io/">Element</a> is the main Matrix client — open source, beautiful, and super customizable. You can run it locally, in your browser, or host your own copy of the web app.</p>
+<p>Together, Matrix + Element = Your own encrypted chat platform. 🧑‍💻</p>
+<hr>
+<h2 id="-step-by-step-install-matrix-synapse-server">🚀 Step-by-Step: Install Matrix Synapse Server<a hidden class="anchor" aria-hidden="true" href="#-step-by-step-install-matrix-synapse-server">#</a></h2>
+<p>We’ll install <a href="https://github.com/matrix-org/synapse"><strong>Synapse</strong></a>, the most popular Matrix server implementation.</p>
+<h3 id="-requirements">✅ Requirements:<a hidden class="anchor" aria-hidden="true" href="#-requirements">#</a></h3>
+<ul>
+<li>VPS or homelab machine (Ubuntu 22.04 or similar)</li>
+<li>Docker + Docker Compose</li>
+<li>A domain name (e.g., <code>chat.yourdomain.com</code>)</li>
+<li>A reverse proxy (we’ll use Traefik or Nginx)</li>
+</ul>
+<hr>
+<h3 id="-folder-structure">📁 Folder Structure<a hidden class="anchor" aria-hidden="true" href="#-folder-structure">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/matrix/synapse
+</span></span><span style="display:flex;"><span>cd ~/matrix/synapse
+</span></span></code></pre></div><h3 id="-create-env-file">🧾 Create <code>.env</code> file<a hidden class="anchor" aria-hidden="true" href="#-create-env-file">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-env" data-lang="env"><span style="display:flex;"><span>SERVER_NAME<span style="color:#f92672">=</span>yourdomain.com
+</span></span><span style="display:flex;"><span>POSTGRES_PASSWORD<span style="color:#f92672">=</span>supersecurepassword
+</span></span></code></pre></div><hr>
+<h3 id="-docker-composeyml">🐳 <code>docker-compose.yml</code><a hidden class="anchor" aria-hidden="true" href="#-docker-composeyml">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.7&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">synapse</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">matrixdotorg/synapse:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">synapse</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SYNAPSE_SERVER_NAME=${SERVER_NAME}</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SYNAPSE_REPORT_STATS=yes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SYNAPSE_CONFIG_PATH=/data/homeserver.yaml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./data:/data</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">postgres</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">matrix</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">postgres</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">postgres:13</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">POSTGRES_DB=synapse</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">POSTGRES_USER=synapse</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">POSTGRES_PASSWORD=${POSTGRES_PASSWORD}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./postgres:/var/lib/postgresql/data</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">matrix</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">matrix</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver</span>: <span style="color:#ae81ff">bridge</span>
+</span></span></code></pre></div><hr>
+<h2 id="-step-2-setup-reverse-proxy-with-https">🔐 Step 2: Setup Reverse Proxy with HTTPS<a hidden class="anchor" aria-hidden="true" href="#-step-2-setup-reverse-proxy-with-https">#</a></h2>
+<h3 id="option-a-with-traefik-recommended">Option A: With Traefik (recommended)<a hidden class="anchor" aria-hidden="true" href="#option-a-with-traefik-recommended">#</a></h3>
+<p>Just add labels to your <code>synapse</code> container, like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#e6db74">&#34;traefik.enable=true&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#e6db74">&#34;traefik.http.routers.matrix.rule=Host(`matrix.yourdomain.com`)&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#e6db74">&#34;traefik.http.routers.matrix.entrypoints=websecure&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#e6db74">&#34;traefik.http.routers.matrix.tls.certresolver=letsencrypt&#34;</span>
+</span></span></code></pre></div><h3 id="option-b-with-nginx">Option B: With Nginx<a hidden class="anchor" aria-hidden="true" href="#option-b-with-nginx">#</a></h3>
+<p>Install Certbot and create a basic proxy config:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">server_name</span> <span style="color:#e6db74">matrix.yourdomain.com</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">proxy_pass</span> <span style="color:#e6db74">http://localhost:8008</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">proxy_set_header</span> <span style="color:#e6db74">Host</span> $host;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">proxy_set_header</span> <span style="color:#e6db74">X-Forwarded-For</span> $remote_addr;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">listen</span> <span style="color:#ae81ff">443</span> <span style="color:#e6db74">ssl</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ssl_certificate</span> <span style="color:#e6db74">/etc/letsencrypt/live/yourdomain.com/fullchain.pem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ssl_certificate_key</span> <span style="color:#e6db74">/etc/letsencrypt/live/yourdomain.com/privkey.pem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="-step-3-run-synapse">✅ Step 3: Run Synapse<a hidden class="anchor" aria-hidden="true" href="#-step-3-run-synapse">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose up -d
+</span></span></code></pre></div><p>Then initialize your first user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec -it synapse register_new_matrix_user -c /data/homeserver.yaml http://localhost:8008
+</span></span></code></pre></div><p>You’ll be asked to enter a username, password, and optionally make this account an admin.</p>
+<p>Congrats! Your Matrix server is online 💬🧠</p>
+<hr>
+<h2 id="-step-4-deploy-element-web">🖼 Step 4: Deploy Element Web<a hidden class="anchor" aria-hidden="true" href="#-step-4-deploy-element-web">#</a></h2>
+<p>Create another folder: <code>~/matrix/element</code></p>
+<h3 id="docker-composeyml-for-element"><code>docker-compose.yml</code> for Element:<a hidden class="anchor" aria-hidden="true" href="#docker-composeyml-for-element">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">element</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">vectorim/element-web:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">element</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./config.json:/app/config.json</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8080:80&#34;</span>
+</span></span></code></pre></div><h3 id="configjson"><code>config.json</code><a hidden class="anchor" aria-hidden="true" href="#configjson">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;default_server_config&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;m.homeserver&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;base_url&#34;</span>: <span style="color:#e6db74">&#34;https://matrix.yourdomain.com&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;server_name&#34;</span>: <span style="color:#e6db74">&#34;yourdomain.com&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;disable_custom_urls&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;default_theme&#34;</span>: <span style="color:#e6db74">&#34;light&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;MyMatrix&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;features&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;feature_pinning&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Then start it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose up -d
+</span></span></code></pre></div><p>Point your browser to <code>https://element.yourdomain.com</code> and log in with your Matrix username!</p>
+<hr>
+<h2 id="-bonus-use-on-mobile">📱 Bonus: Use on Mobile<a hidden class="anchor" aria-hidden="true" href="#-bonus-use-on-mobile">#</a></h2>
+<p>You can use your Matrix server with the <strong>Element app</strong> on iOS or Android!</p>
+<ul>
+<li>Download <a href="https://element.io/get-started">Element</a></li>
+<li>Tap <em>&ldquo;Other server&rdquo;</em></li>
+<li>Enter <code>https://matrix.yourdomain.com</code></li>
+<li>Log in!</li>
+</ul>
+<hr>
+<h2 id="-optional-enable-federation">🔒 Optional: Enable Federation<a hidden class="anchor" aria-hidden="true" href="#-optional-enable-federation">#</a></h2>
+<p>Want your Matrix server to talk to other Matrix servers (like <code>matrix.org</code>)? You&rsquo;ll need to:</p>
+<ul>
+<li>Make sure port 8448 is open</li>
+<li>Add a <code>server_name</code> DNS SRV record (optional but helpful)</li>
+<li>Set up well-known file under <code>/.well-known/matrix/server</code></li>
+</ul>
+<p>More info: <a href="https://matrix-org.github.io/synapse/latest/federate.html">Matrix Federation Guide</a></p>
+<hr>
+<h2 id="-why-host-your-own-matrix-server">🧠 Why Host Your Own Matrix Server?<a hidden class="anchor" aria-hidden="true" href="#-why-host-your-own-matrix-server">#</a></h2>
+<ul>
+<li>✅ Fully encrypted messaging</li>
+<li>✅ Federated: you control your domain and users</li>
+<li>✅ Bridge with Slack, Discord, Telegram, etc.</li>
+<li>✅ Beautiful UI via Element</li>
+<li>✅ Open source, community driven</li>
+</ul>
+<hr>
+<p><strong>That’s it!</strong> You now have your own chat server, powered by Matrix and Element — hosted under your domain, fully encrypted, and ready for friends, family, or your whole team.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.innocloud.io/tags/tech/">Tech</a></li>
+      <li><a href="https://blog.innocloud.io/tags/docker/">Docker</a></li>
+      <li><a href="https://blog.innocloud.io/tags/github/">Github</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://blog.innocloud.io/">InnoCloud.io</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
