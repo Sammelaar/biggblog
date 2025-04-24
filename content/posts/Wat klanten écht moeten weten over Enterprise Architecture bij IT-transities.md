@@ -1,6 +1,6 @@
 ---
 title: Wat klanten écht moeten weten over Enterprise Architecture bij IT-transities 🔍💡
-date: 2025-05-01
+date: 2025-04-24
 category:
 summary:
 description: 
