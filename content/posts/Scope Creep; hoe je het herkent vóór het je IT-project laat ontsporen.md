@@ -1,5 +1,5 @@
 ---
-title: Scope Creep; hoe je het herkent vóór het je IT-project laat ontsporen (en hoe je flexibel blijft zonder chaos) 🚀
+title: Scope Creep; hoe je het herkent vóór het je IT-project laat ontsporen 🚀
 date: 2025-04-28
 category:
 summary:
