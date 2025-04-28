@@ -23,18 +23,6 @@ Gelukkig kun je scope creep wél vroegtijdig signaleren én slim beheersen, zond
 &lt;p&gt;Scope creep betekent simpelweg dat de afgesproken projectomvang gaandeweg steeds verder uitbreidt, zonder dat daar formeel toestemming of extra tijd/budget voor is geregeld.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hosting Your Own Matrix Server &#43; Element Chat 💬🧠</title>
-      <link>https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat/</link>
-      <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Because you deserve private, encrypted, decentralized communication.&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Ever wanted your own chat platform — one that’s &lt;strong&gt;secure&lt;/strong&gt;, &lt;strong&gt;open&lt;/strong&gt;, &lt;strong&gt;decentralized&lt;/strong&gt;, and &lt;strong&gt;completely self-hosted&lt;/strong&gt;?&lt;/p&gt;
-&lt;p&gt;Welcome to &lt;strong&gt;Matrix&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Matrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s &lt;strong&gt;Element&lt;/strong&gt; — a slick, modern chat client that makes using your server feel like Slack meets Signal.&lt;/p&gt;
-&lt;p&gt;In this guide, I’ll walk you through how to &lt;strong&gt;spin up your own Matrix homeserver (Synapse)&lt;/strong&gt; and host &lt;strong&gt;Element web&lt;/strong&gt; so you can start chatting from your domain, with your rules.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Hoe je voorkomt dat IT-projecten blijven schuiven; lessen uit de praktijk ⏳🚀</title>
       <link>https://blog.innocloud.io/posts/hoe-je-voorkomt-dat-it-projecten-blijven-schuiven-lessen-uit-de-praktijk/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
@@ -64,6 +52,18 @@ Gelukkig kun je scope creep wél vroegtijdig signaleren én slim beheersen, zond
 &lt;blockquote&gt;
 &lt;p&gt;Yes! Een nieuwe klant meldt zich met een verzoek: &amp;ldquo;Kunnen jullie ons helpen met een veilige, toekomstbestendige IT-omgeving?&amp;rdquo; – klinkt goed toch? Maar ergens tussen die eerste aanvraag en de uiteindelijke oplevering zit een jungle van keuzes, verwachtingen, techniek én mensen. En laat dát nou precies zijn waar ik energie van krijg!
 In deze blog neem ik je mee door onze projectaanpak als MSP. Niet te droog, geen theorieboek, maar gewoon hoe het er echt aan toe gaat – met alle succesmomenten én valkuilen erbij. Let’s go! 🚀&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hosting Your Own Matrix Server &#43; Element Chat 💬🧠</title>
+      <link>https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/hosting-your-own-matrix-server-&#43;-element-chat/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Because you deserve private, encrypted, decentralized communication.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Ever wanted your own chat platform — one that’s &lt;strong&gt;secure&lt;/strong&gt;, &lt;strong&gt;open&lt;/strong&gt;, &lt;strong&gt;decentralized&lt;/strong&gt;, and &lt;strong&gt;completely self-hosted&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Welcome to &lt;strong&gt;Matrix&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Matrix is a protocol for real-time communication, built to be federated (like email) and encrypted by default. And on top of Matrix, there’s &lt;strong&gt;Element&lt;/strong&gt; — a slick, modern chat client that makes using your server feel like Slack meets Signal.&lt;/p&gt;
+&lt;p&gt;In this guide, I’ll walk you through how to &lt;strong&gt;spin up your own Matrix homeserver (Synapse)&lt;/strong&gt; and host &lt;strong&gt;Element web&lt;/strong&gt; so you can start chatting from your domain, with your rules.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setting Up Pangolin on a VPS – A Reverse Proxy Adventure 🦔🚀</title>
