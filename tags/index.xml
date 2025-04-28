@@ -6,27 +6,27 @@
     <description>Recent content in Tags on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Enterprise Architecture</title>
-      <link>https://blog.innocloud.io/tags/enterprise-architecture/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/tags/enterprise-architecture/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Managed Service Provider</title>
       <link>https://blog.innocloud.io/tags/managed-service-provider/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/tags/managed-service-provider/</guid>
       <description></description>
     </item>
     <item>
       <title>Projectmanagement</title>
       <link>https://blog.innocloud.io/tags/projectmanagement/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/tags/projectmanagement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scope</title>
+      <link>https://blog.innocloud.io/tags/scope/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/tags/scope/</guid>
       <description></description>
     </item>
     <item>
@@ -48,6 +48,13 @@
       <link>https://blog.innocloud.io/tags/tech/</link>
       <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Enterprise Architecture</title>
+      <link>https://blog.innocloud.io/tags/enterprise-architecture/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/tags/enterprise-architecture/</guid>
       <description></description>
     </item>
     <item>
