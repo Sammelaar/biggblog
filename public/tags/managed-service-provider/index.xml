@@ -6,28 +6,52 @@
     <description>Recent content in Managed Service Provider on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/tags/managed-service-provider/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scope Creep; hoe je het herkent vóór het je IT-project laat ontsporen (en hoe je flexibel blijft zonder chaos) 🚀</title>
+      <link>https://blog.innocloud.io/posts/scope-creep-hoe-je-het-herkent-v%C3%B3%C3%B3r-het-je-it-project-laat-ontsporen-en-hoe-je-flexibel-blijft-zonder-chaos/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/scope-creep-hoe-je-het-herkent-v%C3%B3%C3%B3r-het-je-it-project-laat-ontsporen-en-hoe-je-flexibel-blijft-zonder-chaos/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Scope creep&lt;/em&gt;. Klinkt onschuldig, maar vraag iedere projectmanager en je krijgt dezelfde reactie: &lt;em&gt;horrorverhalen&lt;/em&gt;.
+Voor je het weet, groeit je project langzaam maar zeker uit tot een oncontroleerbaar monster — zonder dat iemand het écht doorhad.
+Gelukkig kun je scope creep wél vroegtijdig signaleren én slim beheersen, zonder elke verandering meteen af te schieten. Hoe? Dat lees je hier.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;wat-is-scope-creep-eigenlijk-&#34;&gt;Wat is Scope Creep eigenlijk? 🤔&lt;/h3&gt;
+&lt;p&gt;Scope creep betekent simpelweg dat de afgesproken projectomvang gaandeweg steeds verder uitbreidt, zonder dat daar formeel toestemming of extra tijd/budget voor is geregeld.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hoe je voorkomt dat IT-projecten blijven schuiven; lessen uit de praktijk ⏳🚀</title>
+      <link>https://blog.innocloud.io/posts/hoe-je-voorkomt-dat-it-projecten-blijven-schuiven-lessen-uit-de-praktijk/</link>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/hoe-je-voorkomt-dat-it-projecten-blijven-schuiven-lessen-uit-de-praktijk/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;We kennen het allemaal: dat ene IT-project dat &lt;em&gt;&amp;ldquo;nog even uitgesteld wordt&amp;rdquo;&lt;/em&gt;.  Nog een keertje. En nog een keertje. Tot het ergens onderop de stapel verdwijnt, of — erger nog — strandt in frustratie en verloren tijd.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Als projectmanager bij een MSP heb ik die scenario&amp;rsquo;s vaak genoeg gezien. Gelukkig weet ik inmiddels ook hoe je dat schuiven voorkomt. In deze blog deel ik mijn belangrijkste lessen uit de praktijk. Geen theorie, gewoon dingen die écht werken.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wat klanten écht moeten weten over Enterprise Architecture bij IT-transities 🔍💡</title>
+      <link>https://blog.innocloud.io/posts/wat-klanten-%C3%A9cht-moeten-weten-over-enterprise-architecture-bij-it-transities/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/wat-klanten-%C3%A9cht-moeten-weten-over-enterprise-architecture-bij-it-transities/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Enterprise Architecture.&lt;/em&gt; Het klinkt als iets uit een studieboek of een vergaderzaal vol diagrammen. Maar laat je niet misleiden door de naam. Want als je middenin een IT-transitie zit — zoals een cloudmigratie, werkplekvernieuwing of het herinrichten van je applicatielandschap — dan is EA juist het kompas dat je helpt koers te houden. Zonder vaag jargon, mét heldere keuzes. 🚀&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In deze blog leg ik je uit wat Enterprise Architecture eigenlijk is, waarom het relevant is bij IT-transities én wat jij er als klant écht aan hebt.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Van aanvraag tot oplevering; zo managen wij ICT-projecten als MSP 🚀</title>
       <link>https://blog.innocloud.io/posts/van-aanvraag-tot-oplevering-zo-managen-wij-ict-projecten-als-msp/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/posts/van-aanvraag-tot-oplevering-zo-managen-wij-ict-projecten-als-msp/</guid>
       <description>&lt;p&gt;&lt;em&gt;Een kijkje in de keuken van een projectmanager met een liefde voor structuur én chaos&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Yes! Een nieuwe klant meldt zich met een verzoek: &amp;ldquo;Kunnen jullie ons helpen met een veilige, toekomstbestendige IT-omgeving?&amp;rdquo; – klinkt goed toch? Maar ergens tussen die eerste aanvraag en de uiteindelijke oplevering zit een jungle van keuzes, verwachtingen, techniek én mensen. En laat dát nou precies zijn waar ik energie van krijg!
 In deze blog neem ik je mee door onze projectaanpak als MSP. Niet te droog, geen theorieboek, maar gewoon hoe het er echt aan toe gaat – met alle succesmomenten én valkuilen erbij. Let’s go! 🚀&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Wat klanten écht moeten weten over Enterprise Architecture bij IT-transities 🔍💡</title>
-      <link>https://blog.innocloud.io/posts/wat-klanten-%C3%A9cht-moeten-weten-over-enterprise-architecture-bij-it-transities/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.innocloud.io/posts/wat-klanten-%C3%A9cht-moeten-weten-over-enterprise-architecture-bij-it-transities/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Enterprise Architecture.&lt;/em&gt; Het klinkt als iets uit een studieboek of een vergaderzaal vol diagrammen. Maar laat je niet misleiden door de naam. Want als je middenin een IT-transitie zit — zoals een cloudmigratie, werkplekvernieuwing of het herinrichten van je applicatielandschap — dan is EA juist het kompas dat je helpt koers te houden. Zonder vaag jargon, mét heldere keuzes. 🚀&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In deze blog leg ik je uit wat Enterprise Architecture eigenlijk is, waarom het relevant is bij IT-transities én wat jij er als klant écht aan hebt.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

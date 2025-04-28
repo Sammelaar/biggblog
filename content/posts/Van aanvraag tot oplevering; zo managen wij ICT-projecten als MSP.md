@@ -1,6 +1,6 @@
 ---
 title: Van aanvraag tot oplevering; zo managen wij ICT-projecten als MSP 🚀
-date: 2025-04-24
+date: 2025-04-14
 category:
 summary:
 description: 
