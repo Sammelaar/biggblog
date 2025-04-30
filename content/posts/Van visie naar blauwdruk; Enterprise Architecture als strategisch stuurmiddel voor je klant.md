@@ -26,18 +26,13 @@ tags:
 Absoluut! Hier is de **uitgebreide versie** van de blog **“Van visie naar blauwdruk: EA als strategisch stuurmiddel voor je klant”**, waarin ik bovendien **verwijs naar je eerdere blog** (“Wat klanten écht moeten weten over EA bij IT-transities”). Zo ontstaat er inhoudelijke samenhang — en bouw je autoriteit op in je blogreeks.
 
 ---
-
-## ****
-
 > In een eerdere blog vertelde ik waarom **Enterprise Architecture (EA)** onmisbaar is bij IT-transities. (Spoiler: omdat het rust, overzicht en richting geeft.)  
->  
 > In deze blog gaan we een stap verder: **hoe zet je EA praktisch in als stuurmiddel voor je klant?** Dus: hoe ga je van *"We willen naar de cloud"* naar een doordachte, visueel onderbouwde, én gedragen aanpak die niet alleen technisch klopt — maar ook past bij de organisatie?  
->  
 > Geen theorie dit keer, maar concrete stappen, tools en voorbeelden uit mijn eigen praktijk als projectmanager bij een MSP.
 
 ---
 
-### **Even terug: waarom EA geen papieren tijger is**
+### Even terug: waarom EA geen papieren tijger is
 
 In de blog *“Wat klanten écht moeten weten over EA bij IT-transities”* legde ik uit dat EA geen doel op zich is. Het is een **manier van kijken**:  
 - Naar je organisatie  
@@ -51,9 +46,9 @@ Met andere woorden: je **stuurt niet op een project**, maar op een toekomstbeste
 
 ---
 
-### **Van vaag idee naar concrete IT-koers — in 4 stappen**
+### Van vaag idee naar concrete IT-koers — in 4 stappen
 
-#### **1. Strategisch kompas: waarom wil de klant dit eigenlijk?**  
+#### 1. Strategisch kompas: waarom wil de klant dit eigenlijk?  
 Bij een nieuwe klant hoor ik vaak:  
 > *“We moeten naar de cloud.”*  
 > *“Onze infrastructuur is verouderd.”*  
@@ -72,8 +67,7 @@ Een zorgorganisatie wilde “centrale opslag in de cloud”. Uiteindelijk bleek 
 **EA zonder ‘waarom’ is architectuur zonder anker.** Je maakt dan mooie plaatjes, maar ze helpen niemand.
 
 ---
-
-#### **2. De huidige situatie begrijpen (as-is) — zonder te verzanden**
+#### 2. De huidige situatie begrijpen (as-is) — zonder te verzanden
 
 Je kunt geen route uitstippelen als je niet weet waar je nu staat. Daarom brengen we het huidige landschap in kaart:
 - Applicaties
@@ -89,8 +83,7 @@ Je kunt geen route uitstippelen als je niet weet waar je nu staat. Daarom brenge
 Bij een financiële klant ontdekten we tijdens deze stap dat vijf verschillende systemen allemaal klantgegevens verwerkten — zonder centrale logging. Dat was hét moment waarop EA het gesprek verlegde van techniek naar risico’s, governance en compliance.
 
 ---
-
-#### **3. De to-be situatie ontwerpen: principes vóór producten**
+#### 3. De to-be situatie ontwerpen: principes vóór producten
 
 Nu komt het architectuurstuk. Maar let op: je ontwerpt **geen complete IT-infrastructuur**. Wat je wél doet:
 - Vastleggen van **architectuurprincipes**  
@@ -109,8 +102,7 @@ Bij een werkplekproject koos de klant voor standaardisatie op Microsoft 365. Ons
 Zonder EA waren dit losse migratieprojecten geworden. Dankzij het model ontstond een heldere structuur die nu nog steeds werkt als referentie.
 
 ---
-
-#### **4. De EA-roadmap: van visie naar actieplan**
+#### 4. De EA-roadmap: van visie naar actieplan
 
 De laatste stap is het vertalen van je EA-ontwerp naar een **concrete roadmap**. Denk aan:
 - Welke projecten starten we wanneer?  
@@ -125,8 +117,7 @@ Zorg dat de roadmap:
 **Mijn tip:** Gebruik de roadmap als leidraad in elke stuurgroep. Niet alleen om te rapporteren, maar ook om keuzes aan te toetsen: *past dit nog binnen de architectuurvisie?*
 
 ---
-
-### **EA als stuurmiddel = regie terugpakken**
+### EA als stuurmiddel = regie terugpakken
 
 Zonder EA:
 - Is elke nieuwe wens weer een apart project  
@@ -141,8 +132,7 @@ Met EA:
 Het is een **leidinggevende rol**, maar dan zonder de formele pet — een beetje zoals een regisseur achter de schermen.
 
 ---
-
-### **Tot slot: EA werkt pas als je het toepasbaar maakt**
+### Tot slot: EA werkt pas als je het toepasbaar maakt
 
 Je hoeft geen TOGAF-goeroe te zijn. Als je:
 - De juiste vragen stelt  
@@ -151,14 +141,3 @@ Je hoeft geen TOGAF-goeroe te zijn. Als je:
 - En de brug slaat tussen strategie en operatie  
 
 …dan heb je als projectmanager **een mega krachtig stuurmiddel** in handen.
-
----
-
-### **Volgende week?**
-Dan kijken we naar methodes:  
-**Scrum, Kanban of PRINCE2 — wanneer werkt wat bij MSP-projecten?**  
-(Ja, inclusief eerlijke ervaringen én de valkuilen die je echt moet kennen)
-
----
-
-Wil je van deze blog een PDF of presentatieversie (voor klanten of collega's)? Of meteen door naar de volgende blog? Laat maar weten!
