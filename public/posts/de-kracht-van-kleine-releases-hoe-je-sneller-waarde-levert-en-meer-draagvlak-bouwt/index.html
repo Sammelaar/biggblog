@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬 | InnoCloud.io</title>
+<meta name="keywords" content="projectmanagement, managed service provider, release management">
+<meta name="description" content="
+Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.
+Het resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.
+Kleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.">
+<meta name="author" content="Sammelaar">
+<link rel="canonical" href="https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.innocloud.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.innocloud.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.innocloud.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.innocloud.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.innocloud.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/">
+  <meta property="og:site_name" content="InnoCloud.io">
+  <meta property="og:title" content="🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬">
+  <meta property="og:description" content=" Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.
+Het resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.
+Kleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-27T00:00:00+00:00">
+    <meta property="article:tag" content="Projectmanagement">
+    <meta property="article:tag" content="Managed Service Provider">
+    <meta property="article:tag" content="Release Management">
+    <meta property="og:image" content="https://blog.innocloud.io/images/cover_release.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.innocloud.io/images/cover_release.png">
+<meta name="twitter:title" content="🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬">
+<meta name="twitter:description" content="
+Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.
+Het resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.
+Kleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.innocloud.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬",
+      "item": "https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬",
+  "name": "🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬",
+  "description": " Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.\nHet resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.\nKleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.\n",
+  "keywords": [
+    "projectmanagement", "managed service provider", "release management"
+  ],
+  "articleBody": " Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.\nHet resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.\nKleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.\nBig bang vs. kleine stappen: een praktijkvoorbeeld uit mijn werk 🎬 Bij een klant mochten we een moderne werkplek uitrollen naar zo’n 800 medewerkers. De eerste wens van het management:\n“We willen alles in één keer live. Liever één spannend weekend dan maandenlang gefaseerd uitrollen.”\nOp papier logisch: het lijkt snel en overzichtelijk.\nIn de praktijk? Niet dus.\nWe overtuigden ze van een andere aanpak:\nEerst 20 medewerkers in een pilotfase Daarna gefaseerde uitrol per afdeling Elke fase werd geëvalueerd en bijgestuurd Na 3 weken: 800 gebruikers live, zonder chaos Wat bleek?\nTechnische issues kwamen al in de pilot boven water De documentatie en instructies werden aangescherpt met input van gebruikers Enthousiaste pilotgebruikers werden intern ambassadeurs Zonder deze ‘kleine release-aanpak’ hadden we die fouten pas ná de livegang ontdekt — en was de weerstand een stuk groter geweest.\nWaarom kleine releases zoveel voordelen opleveren ✅ 1. Sneller zicht op waarde (ook voor het management) Je kunt al vroeg laten zien dat er resultaat is. Dat is belangrijk, want:\nManagement ziet dat de investering werkt Stakeholders voelen zich betrokken En gebruikers raken gewend aan verandering Bijvoorbeeld: als je werkt aan een nieuwe IT-selfserviceportal, kun je in plaats van het hele portaal in één keer te lanceren, eerst alleen de veelgebruikte onderdelen live zetten. Gebruikers hebben er direct iets aan én je kunt de rest bouwen met hun input.\n2. Korte feedbackloops = betere kwaliteit Elke release levert directe feedback op: wat werkt, wat niet? En waar loopt de gebruiker tegenaan?\nZo ontdekten we bij een andere klant (een zorginstelling) tijdens een vroege fase dat de automatische uitlogtijd van werkstations veel te kort stond ingesteld. Iets dat op papier prima leek, maar in de praktijk enorm irritant was. Dankzij die vroege feedback kon het voor de brede uitrol al worden aangepast.\n3. Draagvlak bij eindgebruikers (en minder weerstand) Mensen zijn niet dol op verandering. Maar ze zijn wél dol op verbeteringen waar ze zelf aan bij hebben gedragen.\nDoor gebruikers vroeg te betrekken, ontstaat er eigenaarschap. Ze voelen zich gehoord, serieus genomen, en worden eerder ambassadeurs dan tegenwerkers.\n4. Kleinere risico’s, beter beheersbaar In plaats van alles in één keer goed moeten doen (wat zelden lukt), lever je stapsgewijs. Gaat er iets mis? Dan raakt het een klein deel — niet het hele bedrijf.\nEn als je beheerdiensten levert (zoals wij als MSP), is dit nóg belangrijker: een gecontroleerde uitrol betekent ook minder druk op de supportafdeling.\nMaar… hoe doe je dat dan slim? Begin met een MVP (Minimum Viable Product) Wat is de kleinste versie van je project die al waarde levert? Begin daar.\nBijvoorbeeld:\nIn plaats van een complete dataplatformmigratie: begin met één dashboard of één rapportagegroep. Nieuwe werkplekken? Begin met devices voor de servicedesk en IT-afdeling. Die kunnen meteen input geven én intern ondersteunen bij bredere adoptie. Plan pilotgroepen zorgvuldig Denk goed na wie je als eerste betrekt.\nKies mensen die:\nRepresentatief zijn voor de doelgroep Bekend zijn binnen de organisatie Constructieve feedback geven Tip: geef deze mensen een podium. Laat hen ervaringen delen met hun collega’s. Succes werkt aanstekelijk.\nCommuniceer de roadmap visueel Gebruik duidelijke, simpele visuals waarin je laat zien:\nWat is al live Wat komt eraan Welke feedbackmomenten er zijn Transparantie = vertrouwen.\nVier successen, hoe klein ook Klaar met de pilot? Laat het weten!\nStuur een intern bericht Geef een demo met korte Q\u0026A Deel complimenten vanuit het projectteam Mensen die zich gewaardeerd voelen, doen meer mee. Simpel maar waar.\nEn wat als de klant (toch) alles in één keer wil? Dit hoor ik vaak. “We willen geen gedoe met fases. Gewoon doorpakken.”\nDan leg ik dit uit:\nGrote livegang = grote risico’s Gebruikers worden overrompeld Issues komen allemaal tegelijk en zorgen voor chaos bij support Het kost uiteindelijk meer tijd én geld Laat concrete voorbeelden zien van andere projecten waarbij de gefaseerde aanpak juist wél zorgde voor grip, rust en tevreden gebruikers. Dat overtuigt vaak beter dan argumenten alleen.\nTot slot: kleine stappen, groot verschil IT-projecten hoeven geen megaklussen te zijn waar je pas op het eind ziet of het werkt.\nDoor incrementeel te werken, kun je:\nVroeg waarde laten zien Continu leren en bijsturen Échte betrokkenheid creëren bij gebruikers en management En het mooiste?\nJe verlaagt risico’s, versnelt resultaat én maakt je project leuker voor iedereen. Echt.\nVolgende keer? Dan neem ik je mee in het onderwerp:\n“Stakeholder alignment zonder eindeloze vergaderingen: zo krijg je iedereen mee op koers” 👥\n",
+  "wordCount" : "834",
+  "inLanguage": "en",
+  "image":"https://blog.innocloud.io/images/cover_release.png","datePublished": "2025-04-27T00:00:00Z",
+  "dateModified": "2025-04-27T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Sammelaar"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InnoCloud.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.innocloud.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.innocloud.io/" accesskey="h" title="BiggBlog (Alt + H)">
+                <img src="https://blog.innocloud.io/innocloud-apple-touch-icon.png" alt="" aria-label="logo"
+                    height="35">BiggBlog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.innocloud.io/archives/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.innocloud.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬
+    </h1>
+    <div class="post-meta"><span title='2025-04-27 00:00:00 +0000 UTC'>April 27, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Sammelaar
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="eager" src="https://blog.innocloud.io/images/cover_release.png" alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#big-bang-vs-kleine-stappen-een-praktijkvoorbeeld-uit-mijn-werk-" aria-label="Big bang vs. kleine stappen: een praktijkvoorbeeld uit mijn werk 🎬">Big bang vs. kleine stappen: een praktijkvoorbeeld uit mijn werk 🎬</a></li>
+                <li>
+                    <a href="#waarom-kleine-releases-zoveel-voordelen-opleveren-" aria-label="Waarom kleine releases zoveel voordelen opleveren ✅">Waarom kleine releases zoveel voordelen opleveren ✅</a><ul>
+                        
+                <li>
+                    <a href="#1-sneller-zicht-op-waarde-ook-voor-het-management" aria-label="1. Sneller zicht op waarde (ook voor het management)">1. Sneller zicht op waarde (ook voor het management)</a></li>
+                <li>
+                    <a href="#2-korte-feedbackloops--betere-kwaliteit" aria-label="2. Korte feedbackloops = betere kwaliteit">2. Korte feedbackloops = betere kwaliteit</a></li>
+                <li>
+                    <a href="#3-draagvlak-bij-eindgebruikers-en-minder-weerstand" aria-label="3. Draagvlak bij eindgebruikers (en minder weerstand)">3. Draagvlak bij eindgebruikers (en minder weerstand)</a></li>
+                <li>
+                    <a href="#4-kleinere-risicos-beter-beheersbaar" aria-label="4. Kleinere risico’s, beter beheersbaar">4. Kleinere risico’s, beter beheersbaar</a></li></ul>
+                </li>
+                <li>
+                    <a href="#maar-hoe-doe-je-dat-dan-slim" aria-label="Maar&hellip; hoe doe je dat dan slim?">Maar&hellip; hoe doe je dat dan slim?</a><ul>
+                        
+                <li>
+                    <a href="#begin-met-een-mvp-minimum-viable-product" aria-label="Begin met een MVP (Minimum Viable Product)">Begin met een MVP (Minimum Viable Product)</a></li>
+                <li>
+                    <a href="#plan-pilotgroepen-zorgvuldig" aria-label="Plan pilotgroepen zorgvuldig">Plan pilotgroepen zorgvuldig</a></li>
+                <li>
+                    <a href="#communiceer-de-roadmap-visueel" aria-label="Communiceer de roadmap visueel">Communiceer de roadmap visueel</a></li>
+                <li>
+                    <a href="#vier-successen-hoe-klein-ook" aria-label="Vier successen, hoe klein ook">Vier successen, hoe klein ook</a></li></ul>
+                </li>
+                <li>
+                    <a href="#en-wat-als-de-klant-toch-alles-in-%c3%a9%c3%a9n-keer-wil" aria-label="En wat als de klant (toch) alles in één keer wil?">En wat als de klant (toch) alles in één keer wil?</a></li>
+                <li>
+                    <a href="#tot-slot-kleine-stappen-groot-verschil" aria-label="Tot slot: kleine stappen, groot verschil">Tot slot: kleine stappen, groot verschil</a></li>
+                <li>
+                    <a href="#volgende-keer" aria-label="Volgende keer?">Volgende keer?</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.<br>
+Het resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.<br>
+Kleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.</p>
+</blockquote>
+<hr>
+<h3 id="big-bang-vs-kleine-stappen-een-praktijkvoorbeeld-uit-mijn-werk-">Big bang vs. kleine stappen: een praktijkvoorbeeld uit mijn werk 🎬<a hidden class="anchor" aria-hidden="true" href="#big-bang-vs-kleine-stappen-een-praktijkvoorbeeld-uit-mijn-werk-">#</a></h3>
+<p>Bij een klant mochten we een moderne werkplek uitrollen naar zo’n 800 medewerkers. De eerste wens van het management:<br>
+<em>&ldquo;We willen alles in één keer live. Liever één spannend weekend dan maandenlang gefaseerd uitrollen.&rdquo;</em></p>
+<p>Op papier logisch: het lijkt snel en overzichtelijk.<br>
+In de praktijk? Niet dus.</p>
+<p>We overtuigden ze van een andere aanpak:</p>
+<ul>
+<li><strong>Eerst 20 medewerkers in een pilotfase</strong></li>
+<li>Daarna gefaseerde uitrol per afdeling</li>
+<li>Elke fase werd geëvalueerd en bijgestuurd</li>
+<li>Na 3 weken: 800 gebruikers live, zonder chaos</li>
+</ul>
+<p>Wat bleek?</p>
+<ul>
+<li>Technische issues kwamen al in de pilot boven water</li>
+<li>De documentatie en instructies werden aangescherpt met input van gebruikers</li>
+<li>Enthousiaste pilotgebruikers werden intern ambassadeurs</li>
+</ul>
+<p><strong>Zonder deze ‘kleine release-aanpak’ hadden we die fouten pas ná de livegang ontdekt — en was de weerstand een stuk groter geweest.</strong></p>
+<hr>
+<h3 id="waarom-kleine-releases-zoveel-voordelen-opleveren-">Waarom kleine releases zoveel voordelen opleveren ✅<a hidden class="anchor" aria-hidden="true" href="#waarom-kleine-releases-zoveel-voordelen-opleveren-">#</a></h3>
+<h4 id="1-sneller-zicht-op-waarde-ook-voor-het-management">1. Sneller zicht op waarde (ook voor het management)<a hidden class="anchor" aria-hidden="true" href="#1-sneller-zicht-op-waarde-ook-voor-het-management">#</a></h4>
+<p>Je kunt al vroeg laten zien dat er resultaat is. Dat is belangrijk, want:</p>
+<ul>
+<li>Management ziet dat de investering werkt</li>
+<li>Stakeholders voelen zich betrokken</li>
+<li>En gebruikers raken gewend aan verandering</li>
+</ul>
+<p>Bijvoorbeeld: als je werkt aan een nieuwe IT-selfserviceportal, kun je in plaats van het hele portaal in één keer te lanceren, eerst alleen de veelgebruikte onderdelen live zetten. Gebruikers hebben er direct iets aan én je kunt de rest bouwen met hun input.</p>
+<h4 id="2-korte-feedbackloops--betere-kwaliteit">2. Korte feedbackloops = betere kwaliteit<a hidden class="anchor" aria-hidden="true" href="#2-korte-feedbackloops--betere-kwaliteit">#</a></h4>
+<p>Elke release levert directe feedback op: wat werkt, wat niet? En waar loopt de gebruiker tegenaan?</p>
+<p>Zo ontdekten we bij een andere klant (een zorginstelling) tijdens een vroege fase dat de automatische uitlogtijd van werkstations veel te kort stond ingesteld. Iets dat op papier prima leek, maar in de praktijk enorm irritant was. Dankzij die vroege feedback kon het voor de brede uitrol al worden aangepast.</p>
+<h4 id="3-draagvlak-bij-eindgebruikers-en-minder-weerstand">3. Draagvlak bij eindgebruikers (en minder weerstand)<a hidden class="anchor" aria-hidden="true" href="#3-draagvlak-bij-eindgebruikers-en-minder-weerstand">#</a></h4>
+<p>Mensen zijn niet dol op verandering. Maar ze zijn wél dol op verbeteringen waar ze zelf aan bij hebben gedragen.</p>
+<p>Door gebruikers vroeg te betrekken, ontstaat er eigenaarschap. Ze voelen zich gehoord, serieus genomen, en worden eerder ambassadeurs dan tegenwerkers.</p>
+<h4 id="4-kleinere-risicos-beter-beheersbaar">4. Kleinere risico’s, beter beheersbaar<a hidden class="anchor" aria-hidden="true" href="#4-kleinere-risicos-beter-beheersbaar">#</a></h4>
+<p>In plaats van alles in één keer goed moeten doen (wat zelden lukt), lever je stapsgewijs. Gaat er iets mis? Dan raakt het een klein deel — niet het hele bedrijf.</p>
+<p>En als je beheerdiensten levert (zoals wij als MSP), is dit nóg belangrijker: een gecontroleerde uitrol betekent ook minder druk op de supportafdeling.</p>
+<hr>
+<h3 id="maar-hoe-doe-je-dat-dan-slim">Maar&hellip; hoe doe je dat dan slim?<a hidden class="anchor" aria-hidden="true" href="#maar-hoe-doe-je-dat-dan-slim">#</a></h3>
+<h4 id="begin-met-een-mvp-minimum-viable-product">Begin met een MVP (Minimum Viable Product)<a hidden class="anchor" aria-hidden="true" href="#begin-met-een-mvp-minimum-viable-product">#</a></h4>
+<p>Wat is de kleinste versie van je project die al waarde levert? Begin daar.</p>
+<p>Bijvoorbeeld:</p>
+<ul>
+<li>In plaats van een complete dataplatformmigratie: begin met één dashboard of één rapportagegroep.</li>
+<li>Nieuwe werkplekken? Begin met devices voor de servicedesk en IT-afdeling. Die kunnen meteen input geven én intern ondersteunen bij bredere adoptie.</li>
+</ul>
+<h4 id="plan-pilotgroepen-zorgvuldig">Plan pilotgroepen zorgvuldig<a hidden class="anchor" aria-hidden="true" href="#plan-pilotgroepen-zorgvuldig">#</a></h4>
+<p>Denk goed na wie je als eerste betrekt.<br>
+Kies mensen die:</p>
+<ul>
+<li>Representatief zijn voor de doelgroep</li>
+<li>Bekend zijn binnen de organisatie</li>
+<li>Constructieve feedback geven</li>
+</ul>
+<p>Tip: geef deze mensen een podium. Laat hen ervaringen delen met hun collega’s. Succes werkt aanstekelijk.</p>
+<h4 id="communiceer-de-roadmap-visueel">Communiceer de roadmap visueel<a hidden class="anchor" aria-hidden="true" href="#communiceer-de-roadmap-visueel">#</a></h4>
+<p>Gebruik duidelijke, simpele visuals waarin je laat zien:</p>
+<ul>
+<li>Wat is al live</li>
+<li>Wat komt eraan</li>
+<li>Welke feedbackmomenten er zijn</li>
+</ul>
+<p>Transparantie = vertrouwen.</p>
+<h4 id="vier-successen-hoe-klein-ook">Vier successen, hoe klein ook<a hidden class="anchor" aria-hidden="true" href="#vier-successen-hoe-klein-ook">#</a></h4>
+<p>Klaar met de pilot? Laat het weten!</p>
+<ul>
+<li>Stuur een intern bericht</li>
+<li>Geef een demo met korte Q&amp;A</li>
+<li>Deel complimenten vanuit het projectteam</li>
+</ul>
+<p>Mensen die zich gewaardeerd voelen, doen meer mee. Simpel maar waar.</p>
+<hr>
+<h3 id="en-wat-als-de-klant-toch-alles-in-één-keer-wil">En wat als de klant (toch) alles in één keer wil?<a hidden class="anchor" aria-hidden="true" href="#en-wat-als-de-klant-toch-alles-in-één-keer-wil">#</a></h3>
+<p>Dit hoor ik vaak. <em>“We willen geen gedoe met fases. Gewoon doorpakken.”</em></p>
+<p>Dan leg ik dit uit:</p>
+<ul>
+<li>Grote livegang = grote risico’s</li>
+<li>Gebruikers worden overrompeld</li>
+<li>Issues komen allemaal tegelijk en zorgen voor chaos bij support</li>
+<li>Het kost uiteindelijk meer tijd én geld</li>
+</ul>
+<p><strong>Laat concrete voorbeelden zien</strong> van andere projecten waarbij de gefaseerde aanpak juist wél zorgde voor grip, rust en tevreden gebruikers. Dat overtuigt vaak beter dan argumenten alleen.</p>
+<hr>
+<h3 id="tot-slot-kleine-stappen-groot-verschil">Tot slot: kleine stappen, groot verschil<a hidden class="anchor" aria-hidden="true" href="#tot-slot-kleine-stappen-groot-verschil">#</a></h3>
+<p>IT-projecten hoeven geen megaklussen te zijn waar je pas op het eind ziet of het werkt.<br>
+Door incrementeel te werken, kun je:</p>
+<ul>
+<li>Vroeg waarde laten zien</li>
+<li>Continu leren en bijsturen</li>
+<li>Échte betrokkenheid creëren bij gebruikers en management</li>
+</ul>
+<p>En het mooiste?<br>
+Je verlaagt risico’s, versnelt resultaat én maakt je project leuker voor iedereen. Echt.</p>
+<hr>
+<h3 id="volgende-keer">Volgende keer?<a hidden class="anchor" aria-hidden="true" href="#volgende-keer">#</a></h3>
+<p>Dan neem ik je mee in het onderwerp:<br>
+“Stakeholder alignment zonder eindeloze vergaderingen: zo krijg je iedereen mee op koers” 👥</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.innocloud.io/tags/projectmanagement/">Projectmanagement</a></li>
+      <li><a href="https://blog.innocloud.io/tags/managed-service-provider/">Managed Service Provider</a></li>
+      <li><a href="https://blog.innocloud.io/tags/release-management/">Release Management</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://blog.innocloud.io/">InnoCloud.io</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

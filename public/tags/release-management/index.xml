@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Release Management on InnoCloud.io</title>
+    <link>https://blog.innocloud.io/tags/release-management/</link>
+    <description>Recent content in Release Management on InnoCloud.io</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.innocloud.io/tags/release-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬</title>
+      <link>https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.&lt;br&gt;
+Het resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.&lt;br&gt;
+Kleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

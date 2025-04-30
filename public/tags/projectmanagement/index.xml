@@ -6,8 +6,30 @@
     <description>Recent content in Projectmanagement on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/tags/projectmanagement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📐 Van visie naar blauwdruk; Enterprise Architecture als strategisch stuurmiddel voor je klant 🚀</title>
+      <link>https://blog.innocloud.io/posts/van-visie-naar-blauwdruk-enterprise-architecture-als-strategisch-stuurmiddel-voor-je-klant/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/van-visie-naar-blauwdruk-enterprise-architecture-als-strategisch-stuurmiddel-voor-je-klant/</guid>
+      <description>&lt;p&gt;Absoluut! Hier is de &lt;strong&gt;uitgebreide versie&lt;/strong&gt; van de blog &lt;strong&gt;“Van visie naar blauwdruk: EA als strategisch stuurmiddel voor je klant”&lt;/strong&gt;, waarin ik bovendien &lt;strong&gt;verwijs naar je eerdere blog&lt;/strong&gt; (“Wat klanten écht moeten weten over EA bij IT-transities”). Zo ontstaat er inhoudelijke samenhang — en bouw je autoriteit op in je blogreeks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;heading&#34;&gt;****&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In een eerdere blog vertelde ik waarom &lt;strong&gt;Enterprise Architecture (EA)&lt;/strong&gt; onmisbaar is bij IT-transities. (Spoiler: omdat het rust, overzicht en richting geeft.)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>👥 Stakeholder alignment zonder eindeloze vergaderingen; zo krijg je iedereen mee op koers</title>
+      <link>https://blog.innocloud.io/posts/stakeholder-alignment-zonder-eindeloze-vergaderingen-zo-krijg-je-iedereen-mee-op-koers/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/stakeholder-alignment-zonder-eindeloze-vergaderingen-zo-krijg-je-iedereen-mee-op-koers/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Er zijn van die projecten waarbij je het gevoel hebt dat je méér tijd kwijt bent aan overleggen dan aan opleveren.&lt;br&gt;
+De klant wil iets anders dan de IT-afdeling. Gebruikers kijken glazig als je iets uitlegt. En bij elk besluit krijg je de klassieke vraag: &lt;em&gt;“Is dit afgestemd met X?”&lt;/em&gt;&lt;br&gt;
+Het toverwoord: &lt;strong&gt;stakeholder alignment&lt;/strong&gt;.&lt;br&gt;
+Maar hoe krijg je dat voor elkaar zonder je week vol te stampen met sessies, calls en “voor de zekerheid”-meetings? In deze blog laat ik je zien hoe ik het aanpak — mét minder overleg, méér eigenaarschap en duidelijke besluiten.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Scope Creep; hoe je het herkent vóór het je IT-project laat ontsporen 🚀</title>
       <link>https://blog.innocloud.io/posts/scope-creep-hoe-je-het-herkent-v%C3%B3%C3%B3r-het-je-it-project-laat-ontsporen/</link>
@@ -21,6 +43,16 @@ Gelukkig kun je scope creep wél vroegtijdig signaleren én slim beheersen, zond
 &lt;hr&gt;
 &lt;h3 id=&#34;wat-is-scope-creep-eigenlijk-&#34;&gt;Wat is Scope Creep eigenlijk? 🤔&lt;/h3&gt;
 &lt;p&gt;Scope creep betekent simpelweg dat de afgesproken projectomvang gaandeweg steeds verder uitbreidt, zonder dat daar formeel toestemming of extra tijd/budget voor is geregeld.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🚀 De kracht van kleine releases; hoe je sneller waarde levert én meer draagvlak bouwt 💬</title>
+      <link>https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Je kent het wel: je team werkt maanden aan een nieuw IT-systeem, en pas op de dag van livegang krijgen gebruikers voor het eerst écht iets te zien.&lt;br&gt;
+Het resultaat? Stress, last-minute issues en eindgebruikers die compleet verrast (of zelfs gefrustreerd) zijn. Dat hoeft niet. Sterker nog: het kán anders — en beter.&lt;br&gt;
+Kleine releases (ook wel: incrementele opleveringen) zijn dé manier om sneller resultaat te boeken, risico’s te beperken en gebruikers vanaf dag één mee te nemen. In deze blog vertel ik je waarom dit zo goed werkt én hoe wij het als MSP praktisch toepassen.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hoe je voorkomt dat IT-projecten blijven schuiven; lessen uit de praktijk ⏳🚀</title>

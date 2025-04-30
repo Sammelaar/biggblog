@@ -2,16 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.innocloud.io/posts/van-visie-naar-blauwdruk-enterprise-architecture-als-strategisch-stuurmiddel-voor-je-klant/</loc>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/enterprise-archtecture/</loc>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.innocloud.io/</loc>
-    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/managed-service-provider/</loc>
-    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/posts/</loc>
-    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/projectmanagement/</loc>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/strategie/</loc>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/</loc>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/posts/stakeholder-alignment-zonder-eindeloze-vergaderingen-zo-krijg-je-iedereen-mee-op-koers/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/tags/scope/</loc>
@@ -20,8 +35,14 @@
     <loc>https://blog.innocloud.io/posts/scope-creep-hoe-je-het-herkent-v%C3%B3%C3%B3r-het-je-it-project-laat-ontsporen/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.innocloud.io/tags/</loc>
+    <loc>https://blog.innocloud.io/tags/stakeholders/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/posts/de-kracht-van-kleine-releases-hoe-je-sneller-waarde-levert-en-meer-draagvlak-bouwt/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.innocloud.io/tags/release-management/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.innocloud.io/posts/hoe-je-voorkomt-dat-it-projecten-blijven-schuiven-lessen-uit-de-praktijk/</loc>
     <lastmod>2025-04-21T00:00:00+00:00</lastmod>

@@ -6,20 +6,34 @@
     <description>Recent content in Tags on InnoCloud.io</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.innocloud.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enterprise Archtecture</title>
+      <link>https://blog.innocloud.io/tags/enterprise-archtecture/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/tags/enterprise-archtecture/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Managed Service Provider</title>
       <link>https://blog.innocloud.io/tags/managed-service-provider/</link>
-      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/tags/managed-service-provider/</guid>
       <description></description>
     </item>
     <item>
       <title>Projectmanagement</title>
       <link>https://blog.innocloud.io/tags/projectmanagement/</link>
-      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/tags/projectmanagement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Strategie</title>
+      <link>https://blog.innocloud.io/tags/strategie/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/tags/strategie/</guid>
       <description></description>
     </item>
     <item>
@@ -27,6 +41,20 @@
       <link>https://blog.innocloud.io/tags/scope/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.innocloud.io/tags/scope/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stakeholders</title>
+      <link>https://blog.innocloud.io/tags/stakeholders/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/tags/stakeholders/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Release Management</title>
+      <link>https://blog.innocloud.io/tags/release-management/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.innocloud.io/tags/release-management/</guid>
       <description></description>
     </item>
     <item>
